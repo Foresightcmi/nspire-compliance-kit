@@ -1,5 +1,0 @@
-file 'C:\Users\fores\.gemini\antigravity\scratch\nspire-compliance-kit\vsl_build\audio_00.wav'
-file 'C:\Users\fores\.gemini\antigravity\scratch\nspire-compliance-kit\vsl_build\audio_01.wav'
-file 'C:\Users\fores\.gemini\antigravity\scratch\nspire-compliance-kit\vsl_build\audio_02.wav'
-file 'C:\Users\fores\.gemini\antigravity\scratch\nspire-compliance-kit\vsl_build\audio_03.wav'
-file 'C:\Users\fores\.gemini\antigravity\scratch\nspire-compliance-kit\vsl_build\audio_04.wav'
