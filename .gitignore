@@ -7,3 +7,5 @@ vsl_build/
 Hud_NSPIRE_*.mp4
 download_*.py
 onedrive_*.png
+
+.vercel
