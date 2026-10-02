@@ -20,4 +20,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://nspirecompliancekit.com/sitemap.xml
+Sitemap: https://foresightcmi.github.io/nspire-compliance-kit/sitemap.xml

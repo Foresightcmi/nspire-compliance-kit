@@ -7,7 +7,7 @@ import os
 from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DOMAIN = "https://nspirecompliancekit.com"
+DOMAIN = "https://foresightcmi.github.io/nspire-compliance-kit"
 TODAY = datetime.now().strftime("%Y-%m-%d")
 
 urls = [
