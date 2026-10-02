@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found (404) | HUD NSPIRE Compliance Kit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0b0f19; color: #f1f5f9; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .glass-panel { background: rgba(17, 24, 39, 0.85); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between py-12 px-6">
+    <div class="max-w-2xl mx-auto w-full my-auto text-center">
+        
+        <div class="glass-panel p-10 md:p-12 rounded-3xl border border-slate-800 shadow-2xl">
+            <div class="w-16 h-16 bg-blue-500/10 text-blue-400 border border-blue-500/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="shield-alert" class="w-8 h-8"></i>
+            </div>
+            
+            <div class="font-mono text-xs text-blue-400 font-bold uppercase tracking-widest mb-2">Error 404 &bull; Defect Not Found</div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">Page Not Located</h1>
+            <p class="text-slate-400 text-sm max-w-md mx-auto mb-8 leading-relaxed">
+                The regulatory compliance document or page you requested cannot be found. It may have moved or been consolidated into the 2026 NSPIRE vault.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a href="index.html" class="w-full sm:w-auto px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2">
+                    <i data-lucide="home" class="w-4 h-4"></i> Return to Homepage
+                </a>
+                <a href="index.html#quick-checker" class="w-full sm:w-auto px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl text-xs transition-all border border-slate-700 flex items-center justify-center gap-2">
+                    <i data-lucide="search" class="w-4 h-4"></i> Defect Quick-Checker
+                </a>
+                <a href="pha/index.html" class="w-full sm:w-auto px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl text-xs transition-all border border-slate-700 flex items-center justify-center gap-2">
+                    <i data-lucide="building" class="w-4 h-4"></i> Housing Authorities
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="text-center text-xs text-slate-600">
+        &copy; 2026 NSPIRE Defense. All rights reserved. Self-Audit Educational Systems.
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

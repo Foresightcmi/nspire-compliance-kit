@@ -1,0 +1,46 @@
+# HUD NSPIRE Property Inspection Compliance Kit
+
+> Official regulatory self-audit, scoring simulation, and administrative preparation system for Section 8, Housing Choice Voucher (HCV), and HUD-assisted multifamily property owners and operators. Built under Title 24 of the Code of Federal Regulations (24 CFR Part 5 Subpart G).
+
+## Overview
+The National Standards for the Physical Inspection of Real Estate (NSPIRE) replaced the legacy UPCS/HQS standards for all HUD programs, including Public Housing, Section 8 Multifamily Housing, Housing Choice Vouchers (HCV), and CPD programs. NSPIRE shifts inspection emphasis directly to resident health and safety inside the living unit.
+
+Under NSPIRE, defects are categorized into three affirmative severity tiers:
+1. **Life-Threatening (LT)**: Mandatory 24-hour repair and photo-proof verification window. Failure results in immediate suspension or abatement of Housing Assistance Payment (HAP) voucher subsidies.
+2. **Severe**: Mandatory 24-hour or 30-day repair window depending on program classification.
+3. **Moderate / Low**: 30-day or 60-day corrective windows with points deducted from the property's composite 100-point REAC score.
+
+## Primary Inspection Focus Areas
+- **The Living Unit (50%+ Scoring Weight)**: Evaluates resident units for life-safety compliance, including sealed smoke alarms, CO detectors, GFCI electrical receptacles within 6 feet of water sources, operational egress windows, hot water temperature (100°F - 120°F), and gas leak prevention.
+- **Inside Areas**: Common corridors, basements, laundry facilities, mechanical rooms, electrical service rooms, and fire suppression risers.
+- **Outside Areas**: Building envelopes, roofs, gutters, exterior stairs, handrails, parking surfaces, and municipal site grading.
+
+## Top 10 Immediate Life-Threatening (24-Hour) Failure Items
+1. **Smoke Alarms**: Missing, dead batteries, or non-sealed batteries in battery-only alarms. Requires alarms in every bedroom, immediate hallway, and each level.
+2. **Carbon Monoxide (CO) Alarms**: Missing CO alarms on any level with fuel-burning appliances or attached garages.
+3. **GFCI Receptacles**: Missing or malfunctioning Ground Fault Circuit Interrupters within 6 feet of any sink or water source.
+4. **Water Heater Temperature & Pressure Relief (TPR) Valve**: Missing, plugged, or incorrectly pitched discharge pipe terminating more than 6 inches above the floor.
+5. **Bedroom Window Egress**: Windows nailed shut, painted shut, or blocked by heavy AC units preventing emergency fire escape.
+6. **Double-Cylinder Deadbolt Locks**: Locks requiring an interior key to exit the property (severe entrapment hazard).
+7. **Electrical Panel Hazards**: Missing breaker blanks or unsealed knockout holes allowing accidental contact with live busbars.
+8. **Exposed Electrical Wiring**: Missing outlet or switch plate covers; uncapped open splice wires.
+9. **Natural Gas / Propane Leaks**: Detectable raw gas odor or unvented fuel-fired heaters in sleeping quarters.
+10. **Structural Fall Hazards**: Missing or loose guardrails/handrails on porches, decks, or stairwells with 4+ risers or over 30 inches above grade.
+
+## Compliance Tooling & Deliverables
+- **Top 25 Immediate Failures Guide**: Plain-English, 24-hour priority punchlist with 5-minute contractor fixes.
+- **Master Room-by-Room 67-Standard Checklist**: Clipboard-ready audit sheet covering units, common spaces, and grounds.
+- **Tenant Preparation Notice & 48-Hour Inspection Letter**: Ready-to-send tenant notice letter explaining access and unit prep requirements.
+- **Handyman Scope of Work (SOW)**: Pre-formatted work order template for maintenance contractors.
+- **45-Day Technical Review & Dispute Rebuttal Kit**: Formal administrative appeal letters for contesting improper REAC deductions.
+- **HUD Scoring Simulation Model**: Multi-unit scoring algorithm reflecting current HUD Federal Register notices (Docket No. FR-6086-N-04 / 2026-19881).
+- **Federal Register Regulatory Radar**: Automated compliance daemon monitoring HUD notices and standards amendments.
+
+## Canonical Statutory References
+- Standard: 24 CFR Part 5 Subpart G (Physical Condition Standards and Inspection Requirements)
+- Rule: 88 FR 30442 (Economic Growth Regulatory Relief and Consumer Protection Act: Implementation of NSPIRE)
+- Scoring Notice: 88 FR 43382 / Docket No. FR-6086-N-04
+- Official Portal: https://www.hud.gov/program_offices/public_and_indian_housing/reac/nspire
+
+## Full Documentation
+For complete technical details, code references, and full checklists, see `/llms-full.txt`.

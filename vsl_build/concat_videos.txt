@@ -1,0 +1,5 @@
+file 'C:\Users\fores\.gemini\antigravity\scratch\nspire-compliance-kit\vsl_build\video_00.mp4'
+file 'C:\Users\fores\.gemini\antigravity\scratch\nspire-compliance-kit\vsl_build\video_01.mp4'
+file 'C:\Users\fores\.gemini\antigravity\scratch\nspire-compliance-kit\vsl_build\video_02.mp4'
+file 'C:\Users\fores\.gemini\antigravity\scratch\nspire-compliance-kit\vsl_build\video_03.mp4'
+file 'C:\Users\fores\.gemini\antigravity\scratch\nspire-compliance-kit\vsl_build\video_04.mp4'

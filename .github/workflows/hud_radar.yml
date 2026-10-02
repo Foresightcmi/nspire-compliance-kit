@@ -1,0 +1,36 @@
+name: HUD NSPIRE Federal Register Radar
+
+on:
+  schedule:
+    # Run every Monday at 09:00 UTC (05:00 AM EST)
+    - cron: '0 9 * * 1'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  check-hud-updates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Execute HUD Change Radar
+        run: |
+          python hud_change_radar.py
+          python build_delivery_packages.py
+          python generate_sitemap.py
+
+      - name: Commit and push regulatory updates
+        run: |
+          git config --global user.name "NSPIRE Defense Bot"
+          git config --global user.email "bot@nspiredefense.com"
+          git add hud_rules_cache.json CHANGELOG.md LATEST_HUD_REGULATORY_ALERT.md html_docs/ dist/ sitemap.xml
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore(radar): autonomous HUD regulatory sync [skip ci]"
+          git push

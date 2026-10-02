@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUD NSPIRE Compliance Kit | Self-Audit Checklist & REAC Scoring Vault</title>
+    <meta name="description" content="Prepare for HUD's new NSPIRE physical property inspections. Plain-English room-by-room self-audit checklists, 24-hour emergency defect guides, and automated REAC scoring models.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0b0f19; color: #f1f5f9; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+    </style>
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Summary">
+    <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Full LLM Context">
+
+    <!-- Schema.org Semantic Ontologies & Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://nspirecompliancekit.com/#website",
+          "url": "https://nspirecompliancekit.com/",
+          "name": "HUD NSPIRE Property Inspection Compliance Kit",
+          "description": "Comprehensive self-audit checklists, 24-hour defect resolution guides, and REAC scoring models for Section 8 and HUD-assisted landlords.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "NSPIRE Defense Systems"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://nspirecompliancekit.com/#product",
+          "name": "HUD NSPIRE Property Inspection Compliance Kit",
+          "description": "Turnkey administrative compliance kit for HUD NSPIRE inspections, including 67-standard room-by-room audit checklists, handyman work order scopes, 48-hour tenant notices, and REAC score calculators.",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Quick-Check Defense",
+              "price": "47.00",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://nspirecompliancekit.com/#pricing"
+            },
+            {
+              "@type": "Offer",
+              "name": "Landlord Audit Vault",
+              "price": "97.00",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://nspirecompliancekit.com/#pricing"
+            },
+            {
+              "@type": "Offer",
+              "name": "Executive Suite",
+              "price": "197.00",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://nspirecompliancekit.com/#pricing"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://nspirecompliancekit.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the HUD NSPIRE inspection standard?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "NSPIRE (National Standards for the Physical Inspection of Real Estate) is HUD's updated inspection standard codified under 24 CFR Part 5 Subpart G, replacing legacy UPCS and HQS standards. It places over 50% of scoring weight inside resident living units and strictly enforces mandatory 24-hour repair timelines for Life-Threatening (LT) defects."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens if a property fails an NSPIRE Life-Threatening defect?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If a Life-Threatening (LT) defect is cited (such as an unsealed smoke alarm, missing GFCI within 6 feet of water, or open electrical panel knockouts), the landlord receives a mandatory 24-hour cure notice. Failure to repair and submit electronic photo proof to HUD within 24 hours results in immediate abatement of monthly Section 8 Housing Assistance Payment (HAP) voucher subsidies."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can landlords appeal an unfair HUD NSPIRE score deduction?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Under 24 CFR § 5.711, property owners have 45 calendar days from the receipt of the REAC inspection report to file a formal technical review request for objective inspector error, tenant-caused damage, or pre-approved work-in-progress modernization."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "Legislation",
+          "@id": "https://nspirecompliancekit.com/#legislation",
+          "name": "24 CFR Part 5 Subpart G - Physical Condition Standards and Inspection Requirements",
+          "legislationType": "Federal Regulation",
+          "legislationJurisdiction": "US"
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="antialiased selection:bg-blue-600 selection:text-white flex flex-col min-h-screen">
+
+    <!-- Top Regulatory Notice Bar -->
+    <div class="bg-blue-950/70 border-b border-blue-500/20 px-4 py-2.5 text-xs text-blue-200 text-center font-medium flex items-center justify-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>FEDERAL REGISTER STATUS: 100% Current for 2026 HUD NSPIRE Enforcement &bull; Title 24 CFR Part 5 Subpart G</span>
+    </div>
+
+    <!-- Header -->
+    <header class="border-b border-slate-800/80 sticky top-0 z-40 bg-[#0b0f19]/90 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/30">
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold tracking-tight text-lg text-white">NSPIRE<span class="text-blue-400">DEFENSE</span></span>
+                    <span class="block text-[10px] text-slate-400 font-mono uppercase tracking-widest">Self-Audit &amp; REAC Compliance</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-300">
+                <a href="#quick-checker" class="hover:text-blue-400 transition-colors">Defect Quick-Checker</a>
+                <a href="pha/index.html" class="hover:text-blue-400 transition-colors">Housing Authorities</a>
+                <a href="#pricing" class="hover:text-blue-400 transition-colors">Pricing &amp; Vaults</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="download.html" class="hidden sm:inline-flex px-3 py-1.5 rounded-lg border border-slate-700 text-xs font-semibold text-slate-300 hover:text-white hover:border-slate-500 transition-all">
+                    Access Portal
+                </a>
+                <a href="#pricing" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold rounded-lg transition-all shadow-md shadow-blue-500/20">
+                    Get Inspection Kit
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="py-16 md:py-20 px-6 max-w-5xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold mb-6">
+                <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+                <span>Mandatory 24-Hour Emergency Defect Protocol In Effect</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-6">
+                Don't let a simple maintenance defect <br>
+                <span class="gradient-text">freeze your monthly HUD rent checks.</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
+                Under HUD’s new NSPIRE rules, minor issues like an unsealed smoke alarm or missing GFCI outlet trigger an automatic 24-hour emergency order. Use our plain-English self-audit checklists and automated scoring models to walk your properties before the inspector arrives.
+            </p>
+
+            <!-- 64-Second Executive Video Briefing -->
+            <div class="max-w-3xl mx-auto rounded-2xl overflow-hidden glass-panel border border-blue-500/30 shadow-[0_0_50px_rgba(59,130,246,0.15)] mb-14 text-left">
+                <div class="px-5 py-3.5 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between text-xs">
+                    <span class="flex items-center gap-2 font-mono text-blue-400 font-semibold">
+                        <i data-lucide="play-circle" class="w-4 h-4"></i> OFFICIAL REGULATORY BRIEFING (64 SECONDS)
+                    </span>
+                    <span class="text-slate-400">NO HYPE &bull; PLAIN ENGLISH</span>
+                </div>
+                <div class="relative bg-black aspect-video">
+                    <video controls playsinline preload="metadata" class="w-full h-full object-cover" poster="checklist_broll.jpg">
+                        <source src="nspire_briefing.mp4" type="video/mp4">
+                        Your browser does not support video playback.
+                    </video>
+                </div>
+                <div class="p-4 bg-slate-900/60 text-xs text-slate-300 border-t border-slate-800 flex items-center justify-between">
+                    <span>Includes complete audio narration &amp; synchronized closed captions</span>
+                    <span class="text-emerald-400 font-mono font-medium flex items-center gap-1.5">
+                        <i data-lucide="check" class="w-3.5 h-3.5"></i> Verified Federal Standard Protocol
+                    </span>
+                </div>
+            </div>
+
+            <!-- What's Inside Grid -->
+            <div class="grid md:grid-cols-3 gap-6 text-left mb-16">
+                <div class="glass-card p-6 rounded-xl border border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center mb-4">
+                        <i data-lucide="alert-octagon" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">Top 25 Immediate Fails</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Clear, plain-English breakdown of every 24-hour Life-Threatening defect that causes instant voucher payment suspensions, plus same-day fixes.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl border border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
+                        <i data-lucide="clipboard-list" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">Room-by-Room Walkthrough</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Printable clipboard checklists for bedrooms, kitchens, bathrooms, utility closets, common halls, and exterior grounds.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl border border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+                        <i data-lucide="calculator" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">Automated REAC Scorer</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Official Excel model that automatically calculates your projected 0–100 score, sampling requirements, and point deductions before inspection day.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Defect Quick-Checker Section (Product-Led SEO Tool) -->
+        <section id="quick-checker" class="py-16 px-6 max-w-5xl mx-auto border-t border-slate-800/80">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-semibold mb-3">
+                    <i data-lucide="search" class="w-3.5 h-3.5"></i>
+                    <span>Free Interactive Self-Audit Database</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">HUD NSPIRE Defect Quick-Checker</h2>
+                <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto">
+                    Search any household item below to instantly check its federal severity rating, failure triggers, and the 5-minute landlord fix before an inspector arrives.
+                </p>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 mb-8 shadow-xl">
+                <div class="relative mb-5">
+                    <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+                    <input type="text" id="defect-search" placeholder="Search any item (e.g., GFCI, smoke alarm, water heater, window, panel, gas)..." class="w-full bg-slate-900/90 border border-slate-700/80 rounded-xl py-3.5 pl-12 pr-4 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all">
+                </div>
+
+                <!-- Category Filter Pills -->
+                <div class="flex flex-wrap gap-2 text-xs font-medium" id="filter-pills">
+                    <button data-cat="all" class="filter-pill active px-3.5 py-1.5 rounded-lg bg-blue-600 text-white font-semibold transition-all">All Items (<span id="count-all">12</span>)</button>
+                    <button data-cat="lt" class="filter-pill px-3.5 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-rose-300 border border-rose-500/30 transition-all">🚨 24-Hr Life-Threatening</button>
+                    <button data-cat="electrical" class="filter-pill px-3.5 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-all">⚡ Electrical</button>
+                    <button data-cat="fire" class="filter-pill px-3.5 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-all">🔥 Fire Safety</button>
+                    <button data-cat="plumbing" class="filter-pill px-3.5 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-all">💧 Plumbing</button>
+                    <button data-cat="openings" class="filter-pill px-3.5 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-all">🚪 Doors &amp; Windows</button>
+                    <button data-cat="hvac" class="filter-pill px-3.5 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-all">♨️ Gas &amp; Heat</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Results Cards Container -->
+            <div id="defects-container" class="grid md:grid-cols-2 gap-5 mb-8">
+                <!-- Javascript will populate cards here -->
+            </div>
+
+            <!-- Audit Upgrade Banner -->
+            <div class="glass-card p-6 rounded-2xl border border-blue-500/40 bg-gradient-to-r from-blue-950/40 to-slate-900/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                    <h4 class="text-white font-bold text-base mb-1">Need the full 67-standard room-by-room audit checklist?</h4>
+                    <p class="text-xs text-slate-300">Download the printable clipboard sheets, tenant notice templates, and the automated REAC score calculator.</p>
+                </div>
+                <a href="#pricing" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg transition-all shadow-md shrink-0">
+                    View Complete Audit Kit &darr;
+                </a>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-16 px-6 bg-slate-950/60 border-t border-slate-800/80">
+            <div class="max-w-5xl mx-auto text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Select Your Compliance Package</h2>
+                <p class="text-slate-400 text-base max-w-xl mx-auto">
+                    Instant digital download. Zero ongoing subscriptions. 100% tax-deductible property management operational expense.
+                </p>
+            </div>
+
+            <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-left">
+                
+                <!-- Tier 1 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Emergency Tier</div>
+                        <h3 class="text-2xl font-bold text-white mb-1">Quick-Check Defense</h3>
+                        <p class="text-xs text-slate-400 mb-6">For single-property mom-and-pop landlords.</p>
+                        <div class="text-4xl font-black text-white mb-6">$47 <span class="text-sm text-slate-400 font-normal">one-time</span></div>
+                        
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                <span><strong>Top 25 Immediate Fails Guide</strong> (PDF)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                <span>Tenant 48-Hour Notice &amp; Prep Checklist</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                <span>Life-Threatening 24-Hour Handyman Punchlist</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="dist/NSPIRE_Tier1_FastPass_Audit_Kit.zip" download class="w-full py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all border border-slate-700 text-center block">
+                        Download Defense Pack ($47)
+                    </a>
+                </div>
+
+                <!-- Tier 2 (Featured) -->
+                <div class="glass-panel p-8 rounded-2xl border-2 border-blue-500 relative flex flex-col justify-between shadow-[0_0_40px_rgba(59,130,246,0.2)]">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[11px] font-mono uppercase px-3 py-1 rounded-full font-bold">
+                        Most Popular for Landlords
+                    </div>
+                    <div>
+                        <div class="text-xs font-mono uppercase tracking-wider text-blue-400 mb-2">Complete Audit</div>
+                        <h3 class="text-2xl font-bold text-white mb-1">Landlord Audit Vault</h3>
+                        <p class="text-xs text-slate-400 mb-6">For landlords with 2 to 10 rental units.</p>
+                        <div class="text-4xl font-black text-white mb-6">$97 <span class="text-sm text-slate-400 font-normal">one-time</span></div>
+                        
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                <span><strong>Everything in Quick-Check ($47 Value)</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                <span><strong>Master Room-by-Room 67-Standard Checklist</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                <span>Handyman Repair Scope of Work (SOW) Template</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                <span>Automated Federal Register Regulatory Update Alerts</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="dist/NSPIRE_Tier2_Operations_Toolkit.zip" download class="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/30 text-center block">
+                        Get Complete Vault ($97)
+                    </a>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Commercial / PM</div>
+                        <h3 class="text-2xl font-bold text-white mb-1">Executive Suite</h3>
+                        <p class="text-xs text-slate-400 mb-6">For property managers &amp; multifamily operators.</p>
+                        <div class="text-4xl font-black text-white mb-6">$197 <span class="text-sm text-slate-400 font-normal">one-time</span></div>
+                        
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                <span><strong>Everything in Complete Vault ($97 Value)</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                <span><strong>Official HUD NSPIRE Scoring Model (Excel)</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                <span>45-Day Technical Review &amp; Dispute Rebuttal Kit</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                                <span>Multi-Property Portfolio Commercial License</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="dist/NSPIRE_Tier3_Complete_Compliance_Suite.zip" download class="w-full py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all border border-slate-700 text-center block">
+                        Get Commercial Suite ($197)
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Mandatory Statutory Transparency & Non-Affiliation Section -->
+        <section class="py-12 px-6 max-w-4xl mx-auto text-xs text-slate-400 border-t border-slate-800/60 leading-relaxed">
+            <h4 class="font-bold uppercase text-slate-300 mb-2 tracking-wider flex items-center gap-1.5">
+                <i data-lucide="info" class="w-4 h-4 text-blue-400"></i> Legal Transparency &amp; Non-Affiliation Notice
+            </h4>
+            <p class="mb-3">
+                This website and the NSPIRE Compliance Kit are published as an independent educational, administrative, and self-audit preparatory resource. <strong>We are NOT affiliated with, sponsored by, or endorsed by the U.S. Department of Housing and Urban Development (HUD), the Real Estate Assessment Center (REAC), or any municipal housing authority.</strong>
+            </p>
+            <p class="mb-3">
+                Official federal inspection standards and notices are public domain government publications established under Title 24 of the Code of Federal Regulations (24 CFR Part 5 Subpart G) and published in the Federal Register. Use of this product does not guarantee a passing REAC score or the continuation of federal subsidies.
+            </p>
+            <p>
+                In compliance with FTC guidelines, this site does not display fabricated testimonials or unverifiable review stars. All regulatory claims are directly verifiable against current federal register publications.
+            </p>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-10 px-6 text-center text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-left">
+                <div class="text-slate-400 font-bold mb-1">&copy; 2026 NSPIRE Defense. All rights reserved.</div>
+                <div class="text-[11px] text-slate-500">Independent Self-Audit Educational Systems &bull; Standard 24 CFR Part 5 Subpart G</div>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-6 text-xs">
+                <a href="privacy-policy.html" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+                <a href="terms-of-service.html" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+                <a href="refund-policy.html" class="hover:text-slate-300 transition-colors">Refund Guarantee</a>
+                <a href="pha/index.html" class="hover:text-slate-300 transition-colors">Housing Authorities (PHA)</a>
+                <a href="html_docs/LEGAL_SHIELD_DISCLAIMER.html" target="_blank" class="hover:text-slate-300 transition-colors">Legal Shield</a>
+                <a href="html_docs/LATEST_HUD_REGULATORY_ALERT.html" target="_blank" class="hover:text-slate-300 transition-colors">Federal Register Log</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const DEFECTS = [
+            {
+                id: 1,
+                title: "Smoke Alarms (Sealed 10-Yr Battery & Placement)",
+                category: "fire",
+                severity: "lt",
+                severityLabel: "LT - 24-Hour Emergency",
+                severityClass: "bg-rose-500/20 text-rose-300 border-rose-500/40",
+                icon: "flame",
+                area: "Unit / Sleeping Areas",
+                checks: "Every bedroom, hallway outside sleeping areas, and every level of the property.",
+                fails: "Missing alarm, dead battery, painted over, or removable 9V batteries in battery-only alarms.",
+                fix: "Install 10-year sealed tamper-resistant lithium battery smoke alarms ($15 each at hardware stores)."
+            },
+            {
+                id: 2,
+                title: "Carbon Monoxide (CO) Alarms",
+                category: "fire",
+                severity: "lt",
+                severityLabel: "LT - 24-Hour Emergency",
+                severityClass: "bg-rose-500/20 text-rose-300 border-rose-500/40",
+                icon: "shield-alert",
+                area: "Unit / Near Fuel Appliances",
+                checks: "Required if home has gas furnace, gas water heater, gas stove, fireplace, or attached garage.",
+                fails: "Missing CO detector outside immediate bedroom hallways or on levels with fuel-burning systems.",
+                fix: "Plug in an approved combination Smoke/CO detector or battery-powered unit in bedroom corridors."
+            },
+            {
+                id: 3,
+                title: "Kitchen & Bath GFCI Outlets within 6 Feet",
+                category: "electrical",
+                severity: "lt",
+                severityLabel: "LT - 24-Hour Emergency",
+                severityClass: "bg-rose-500/20 text-rose-300 border-rose-500/40",
+                icon: "zap",
+                area: "Kitchens & Bathrooms",
+                checks: "Every electrical receptacle located within 6 feet of any water source (sink, tub, basin).",
+                fails: "Standard non-GFCI outlet within 6ft of water, or a GFCI that fails to trip when TEST is pressed.",
+                fix: "Install standard 15A/20A GFCI receptacle ($12 part) or ensure upstream GFCI breaker trips the circuit."
+            },
+            {
+                id: 4,
+                title: "Water Heater TPR Relief Discharge Pipe",
+                category: "plumbing",
+                severity: "lt",
+                severityLabel: "LT - 24-Hour Emergency",
+                severityClass: "bg-rose-500/20 text-rose-300 border-rose-500/40",
+                icon: "droplet",
+                area: "Utility / Mechanical Closet",
+                checks: "Safety valve discharge line extending from top/side of water heater tank.",
+                fails: "Missing pipe, plastic garden hose, capped pipe, or line terminating more than 6 inches from floor.",
+                fix: "Attach rigid 3/4\" copper or CPVC pipe extending straight down to 2\" to 6\" above the floor."
+            },
+            {
+                id: 5,
+                title: "Bedroom Emergency Egress Windows",
+                category: "openings",
+                severity: "lt",
+                severityLabel: "LT - 24-Hour Emergency",
+                severityClass: "bg-rose-500/20 text-rose-300 border-rose-500/40",
+                icon: "maximize",
+                area: "Bedrooms",
+                checks: "At least one operable window in each bedroom capable of emergency rescue escape.",
+                fails: "Window painted or nailed shut, broken balances falling shut, or window AC unit blocking the only opening.",
+                fix: "Scrape dried paint from tracks; install $5 sash spring supports; relocate window AC to non-egress window."
+            },
+            {
+                id: 6,
+                title: "Double-Cylinder Deadbolts (Interior Key Required)",
+                category: "openings",
+                severity: "lt",
+                severityLabel: "LT - 24-Hour Emergency",
+                severityClass: "bg-rose-500/20 text-rose-300 border-rose-500/40",
+                icon: "lock",
+                area: "Exterior Entry Doors",
+                checks: "All egress and entry doors leading to the exterior or common corridors.",
+                fails: "Deadbolt locks requiring a key from the INSIDE to unlock (severe fire entrapment hazard).",
+                fix: "Swap out lock cylinder with a standard thumb-turn deadbolt allowing immediate keyless exit."
+            },
+            {
+                id: 7,
+                title: "Electrical Breaker Box Open Knockouts",
+                category: "electrical",
+                severity: "lt",
+                severityLabel: "LT - 24-Hour Emergency",
+                severityClass: "bg-rose-500/20 text-rose-300 border-rose-500/40",
+                icon: "cpu",
+                area: "Electrical Service Panel",
+                checks: "Main and sub-panels, breaker covers, and knockout plug seals.",
+                fails: "Missing panel cover, open slots without breakers, or missing knockout plugs exposing live busbars.",
+                fix: "Snap in plastic or metal breaker blanks and knockout seals ($1.50 at hardware stores)."
+            },
+            {
+                id: 8,
+                title: "Exposed Electrical Wires & Missing Plates",
+                category: "electrical",
+                severity: "lt",
+                severityLabel: "LT - 24-Hour Emergency",
+                severityClass: "bg-rose-500/20 text-rose-300 border-rose-500/40",
+                icon: "alert-triangle",
+                area: "Throughout Living Unit",
+                checks: "Light switch plates, outlet covers, and ceiling junction boxes.",
+                fails: "Cracked faceplates, missing covers, or exposed bare copper wiring.",
+                fix: "Install clean 79-cent thermoplastic faceplates over all junction boxes and switches."
+            },
+            {
+                id: 9,
+                title: "Gas Stove Burners & Raw Gas Odors",
+                category: "hvac",
+                severity: "lt",
+                severityLabel: "LT - 24-Hour Emergency",
+                severityClass: "bg-rose-500/20 text-rose-300 border-rose-500/40",
+                icon: "wind",
+                area: "Kitchen Range",
+                checks: "Burner igniters, oven flame retention, and gas supply line connections.",
+                fails: "Odor of unburned gas, burner ports clogged requiring match light, or yellow floating flame.",
+                fix: "Clean burner ports with a safety pin; check flex line with soapy water for bubble leaks."
+            },
+            {
+                id: 10,
+                title: "Dryer Vent Exhaust Ducting Material",
+                category: "fire",
+                severity: "severe",
+                severityLabel: "Severe - 24H Repair",
+                severityClass: "bg-amber-500/20 text-amber-300 border-amber-500/40",
+                icon: "flame",
+                area: "Laundry Areas",
+                checks: "Clothes dryer transition and exhaust ducting running to exterior.",
+                fails: "Vinyl, plastic, or thin foil corrugated ducting; duct terminating inside attic, crawlspace, or room.",
+                fix: "Replace with rigid metal or semi-rigid aluminum ducting venting 100% outdoors."
+            },
+            {
+                id: 11,
+                title: "Active Plumbing Leaks & Under-Sink Moisture",
+                category: "plumbing",
+                severity: "moderate",
+                severityLabel: "Moderate - 30D Repair",
+                severityClass: "bg-blue-500/20 text-blue-300 border-blue-500/40",
+                icon: "droplet",
+                area: "Kitchen & Bath Vanities",
+                checks: "Sink P-traps, supply lines, shutoff valves, and cabinet baseboards.",
+                fails: "Active dripping pipes, saturated vanity bottoms, or mildew growth from slow leaks.",
+                fix: "Tighten slip nuts, replace worn rubber washer gaskets ($2), and dry baseboard with fan."
+            },
+            {
+                id: 12,
+                title: "Stair Handrails & Guardrails",
+                category: "openings",
+                severity: "severe",
+                severityLabel: "Severe - 24H Repair",
+                severityClass: "bg-amber-500/20 text-amber-300 border-amber-500/40",
+                icon: "layers",
+                area: "Exterior & Interior Stairs",
+                checks: "Any stairs with 4 or more risers, or porches/decks 30+ inches above ground.",
+                fails: "Missing handrail, loose railing that pulls away under pressure, or baluster gaps over 4 inches.",
+                fix: "Anchor rail brackets securely into wall studs with 3\" wood screws."
+            }
+        ];
+
+        let activeCategory = 'all';
+        let searchQuery = '';
+
+        function renderDefects() {
+            const container = document.getElementById('defects-container');
+            const searchInput = searchQuery.toLowerCase().trim();
+
+            const filtered = DEFECTS.filter(item => {
+                const matchesCat = activeCategory === 'all' 
+                    || (activeCategory === 'lt' && item.severity === 'lt')
+                    || (activeCategory === item.category);
+
+                const matchesQuery = !searchInput 
+                    || item.title.toLowerCase().includes(searchInput)
+                    || item.area.toLowerCase().includes(searchInput)
+                    || item.checks.toLowerCase().includes(searchInput)
+                    || item.fails.toLowerCase().includes(searchInput)
+                    || item.fix.toLowerCase().includes(searchInput);
+
+                return matchesCat && matchesQuery;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-2 glass-card p-8 rounded-xl border border-slate-800 text-center">
+                        <i data-lucide="help-circle" class="w-10 h-10 text-slate-500 mx-auto mb-3"></i>
+                        <h4 class="text-white font-bold text-lg mb-1">No matching defect found</h4>
+                        <p class="text-slate-400 text-sm max-w-md mx-auto mb-4">
+                            Try searching for terms like "smoke", "GFCI", "water heater", "door", "window", or "panel".
+                        </p>
+                        <button onclick="resetSearch()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold rounded-lg border border-slate-700">
+                            Reset Search
+                        </button>
+                    </div>
+                `;
+                lucide.createIcons();
+                return;
+            }
+
+            container.innerHTML = filtered.map(item => `
+                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start justify-between gap-3 mb-3">
+                            <span class="text-xs font-mono px-2.5 py-0.5 rounded-full border font-bold ${item.severityClass}">
+                                ${item.severityLabel}
+                            </span>
+                            <span class="text-[11px] font-mono uppercase text-slate-400">
+                                ${item.area}
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <i data-lucide="${item.icon}" class="w-4 h-4 text-blue-400 shrink-0"></i>
+                            ${item.title}
+                        </h3>
+                        <p class="text-xs text-slate-400 mb-3 leading-relaxed">
+                            <strong class="text-slate-300">Inspector Criteria:</strong> ${item.checks}
+                        </p>
+                        <div class="p-3 bg-rose-950/20 border border-rose-500/20 rounded-lg text-xs text-rose-200 mb-3">
+                            <strong class="text-rose-400 font-semibold">🚨 What Fails:</strong> ${item.fails}
+                        </div>
+                    </div>
+                    <div class="p-3 bg-emerald-950/20 border border-emerald-500/20 rounded-lg text-xs text-emerald-200">
+                        <strong class="text-emerald-400 font-semibold">🛠️ 5-Minute Fix:</strong> ${item.fix}
+                    </div>
+                </div>
+            `).join('');
+
+            lucide.createIcons();
+        }
+
+        function resetSearch() {
+            document.getElementById('defect-search').value = '';
+            searchQuery = '';
+            activeCategory = 'all';
+            updateActivePills();
+            renderDefects();
+        }
+
+        function updateActivePills() {
+            document.querySelectorAll('.filter-pill').forEach(btn => {
+                const cat = btn.getAttribute('data-cat');
+                if (cat === activeCategory) {
+                    btn.classList.add('bg-blue-600', 'text-white', 'font-semibold');
+                    btn.classList.remove('bg-slate-800/90', 'text-slate-300');
+                } else {
+                    btn.classList.remove('bg-blue-600', 'text-white', 'font-semibold');
+                    btn.classList.add('bg-slate-800/90');
+                }
+            });
+        }
+
+        // Attach listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('defect-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    searchQuery = e.target.value;
+                    renderDefects();
+                });
+            }
+
+            document.querySelectorAll('.filter-pill').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    activeCategory = btn.getAttribute('data-cat');
+                    updateActivePills();
+                    renderDefects();
+                });
+            });
+
+            renderDefects();
+        });
+
+        lucide.createIcons();
+    </script>
+</body>
+</html>

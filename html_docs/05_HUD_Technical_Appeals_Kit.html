@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUD Technical Appeals Kit | HUD NSPIRE Compliance Kit</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --primary: #1e3a8a;
+      --primary-light: #eff6ff;
+      --accent-red: #ef4444;
+      --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
+      --border: #e2e8f0;
+      --card-bg: #f8fafc;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      padding: 2.5rem 1.5rem;
+    }
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .brand-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .print-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .print-btn:hover {
+      background: #1e40af;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #334155;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    p {
+      margin-bottom: 1.1rem;
+    }
+    ul, ol {
+      margin-bottom: 1.25rem;
+      padding-left: 1.75rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    blockquote {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      font-style: normal;
+      color: #1e3a8a;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.92rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.75rem 0.9rem;
+      text-align: left;
+    }
+    th {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-red {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    .badge-amber {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    .badge-green {
+      background: #dcfce7;
+      color: #166534;
+    }
+    .footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    @media print {
+      body {
+        padding: 0;
+      }
+      .print-btn {
+        display: none;
+      }
+      .header-bar {
+        margin-bottom: 1rem;
+      }
+      h1, h2, h3 {
+        page-break-after: avoid;
+      }
+      table, blockquote {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-bar">
+      <div class="brand-title">HUD NSPIRE Property Inspection Compliance Kit</div>
+      <button class="print-btn" onclick="window.print()">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+          <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+        </svg>
+        Print / Save as PDF
+      </button>
+    </div>
+    <div class="content">
+      <h1>⚖️ OFFICIAL HUD NSPIRE TECHNICAL DISPUTE & REBUTTAL KIT</h1>
+<h3>Step-by-Step Guide & Letter Template to Challenge Erroneous Inspector Deductions</h3>
+<p><em>Governed under Title 24 CFR Part 5 Subpart G — The 45-Day Appeal Window</em></p>
+<p>---</p>
+<h2>🕒 The Strict 45-Day Rule</h2>
+<p>Under HUD regulations, you have <strong>exactly 45 calendar days from the date of the inspection report release</strong> to submit a formal technical dispute to the Real Estate Assessment Center (REAC).</p>
+<ul>
+<li>If you miss the 45-day deadline, the score is permanent and cannot be contested.</li>
+<li>Only technical errors, inspector protocol deviations, or local code conflicts qualify for point restoration. (Generic complaints like "the inspector was mean" are automatically rejected).</li>
+</ul>
+<p>---</p>
+<h2>📝 FORMAL REBUTTAL LETTER TEMPLATE</h2>
+<p><em>(Copy and paste into your company letterhead, fill in the bracketed items, and submit via HUD's Secure Systems portal)</em></p>
+<p><code>`</code>text</p>
+<p>[Date]</p>
+<p>Department of Housing and Urban Development</p>
+<p>Real Estate Assessment Center (REAC)</p>
+<p>Attention: Technical Review & Quality Assurance Division</p>
+<p>550 12th Street SW, Suite 100</p>
+<p>Washington, DC 20410</p>
+<p>VIA SECURE SYSTEMS PORTAL (TECHNICAL REVIEW SUBMISSION)</p>
+<p>RE: Formal Technical Review Request & Score Rebuttal</p>
+<p>Property Name: [Property Name]</p>
+<p>HUD / FHA / iREMS Number: [Property ID Number]</p>
+<p>Inspection Date: [Date of Physical Inspection]</p>
+<p>Official Inspection ID: [Inspection Report Number]</p>
+<p>Current Release Score: [Current Score, e.g. 58]</p>
+<p>Dear REAC Technical Review Committee,</p>
+<p>Pursuant to Title 24 of the Code of Federal Regulations (24 CFR § 5.711) and the official HUD NSPIRE Final Scoring Notice, the undersigned property representative hereby requests a formal Technical Review and adjustment of points for the inspection referenced above.</p>
+<p>Upon thorough review of the certified inspection report and our pre-inspection photo documentation, we have identified specific deficiencies cited by the inspector that materially deviate from established NSPIRE standards or misclassify property components:</p>
+<p>DEFICIENCY ITEM #1 TO BE ADJUSTED:</p>
+<ol>
+<li>Location of Citation: [e.g. Unit 204, Bedroom 2]</li>
+<li>Standard Cited: [e.g. Egress - Window Blocked]</li>
+<li>Point Impact / Severity: [e.g. Severe Life-Threatening, -4.2 points]</li>
+<li>Technical Basis for Reversal:</li>
+</ol>
+<p>[Provide clear factual justification, e.g.: The inspector cited the window as obstructed due to a child's toy chest. Under official NSPIRE Standard Egress Version 3.0, Section 2.1, temporary lightweight movable furniture does not constitute a permanent physical obstruction. As demonstrated in Exhibit A (time-stamped photograph taken immediately following inspection), the window sash glides freely without physical impediment and measures 24 inches wide by 36 inches high, exceeding minimum egress dimensions.]</p>
+<p>DEFICIENCY ITEM #2 TO BE ADJUSTED:</p>
+<ol>
+<li>Location of Citation: [e.g. Building Exterior - Sidewalk]</li>
+<li>Standard Cited: [e.g. Walking Surfaces - Trip Hazard]</li>
+<li>Point Impact: [-2.1 points]</li>
+<li>Technical Basis for Reversal:</li>
+</ol>
+<p>[Provide factual justification, e.g.: The inspector cited a vertical concrete displacement on the north walkway. Under NSPIRE Standard Sidewalks and Ramps, a tripping defect strictly requires a height differential of 0.75 inches or greater. Exhibit B includes physical measurement photos with a calibrated depth gauge showing the maximum deviation is exactly 0.35 inches, which falls below the mandatory threshold for scoring deduction.]</p>
+<p>ATTACHED EXHIBITS & TIME-STAMPED EVIDENCE:</p>
+<ul>
+<li>Exhibit A: Time-stamped color photographs of disputed unit/area.</li>
+<li>Exhibit B: Calibrated measurement evidence and vendor invoices.</li>
+<li>Exhibit C: Certified Certificate of Occupancy or local municipal code variance.</li>
+</ul>
+<p>Because the aforementioned citations were recorded in error or contrary to published NSPIRE protocol guidelines, we respectfully request that REAC recalculate the overall property physical inspection score to reflect the restoration of [Number] points, yielding a revised score of [Projected Score, e.g. 64].</p>
+<p>Respectfully submitted,</p>
+<p>____________________________________________</p>
+<p>[Authorized Property Representative Name]</p>
+<p>[Title, e.g. Managing Member / Asset Manager]</p>
+<p>[Company / Owner Entity Name]</p>
+<p>[Direct Phone Number]</p>
+<p>[Direct Email Address]</p>
+<p><code>`</code></p>
+    </div>
+    <div class="footer">
+      HUD NSPIRE Property Inspection Compliance Kit &bull; Educational Self-Audit Tool &bull; Standard 24 CFR Part 5 Subpart G
+    </div>
+  </div>
+</body>
+</html>

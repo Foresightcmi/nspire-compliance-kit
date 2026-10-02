@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latest HUD Regulatory Alert | HUD NSPIRE Compliance Kit</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --primary: #1e3a8a;
+      --primary-light: #eff6ff;
+      --accent-red: #ef4444;
+      --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
+      --border: #e2e8f0;
+      --card-bg: #f8fafc;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      padding: 2.5rem 1.5rem;
+    }
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .brand-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .print-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .print-btn:hover {
+      background: #1e40af;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #334155;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    p {
+      margin-bottom: 1.1rem;
+    }
+    ul, ol {
+      margin-bottom: 1.25rem;
+      padding-left: 1.75rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    blockquote {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      font-style: normal;
+      color: #1e3a8a;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.92rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.75rem 0.9rem;
+      text-align: left;
+    }
+    th {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-red {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    .badge-amber {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    .badge-green {
+      background: #dcfce7;
+      color: #166534;
+    }
+    .footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    @media print {
+      body {
+        padding: 0;
+      }
+      .print-btn {
+        display: none;
+      }
+      .header-bar {
+        margin-bottom: 1rem;
+      }
+      h1, h2, h3 {
+        page-break-after: avoid;
+      }
+      table, blockquote {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-bar">
+      <div class="brand-title">HUD NSPIRE Property Inspection Compliance Kit</div>
+      <button class="print-btn" onclick="window.print()">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+          <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+        </svg>
+        Print / Save as PDF
+      </button>
+    </div>
+    <div class="content">
+      <h1>HUD NSPIRE REGULATORY UPDATE ALERT</h1>
+<p><em>Last Checked: October 02, 2026 at 02:45 AM</em></p>
+<h3>National Standards for the Physical Inspection of Real Estate: Scoring Notice</h3>
+<ul>
+<li><strong>Publication Date:</strong> 2026-09-29</li>
+<li><strong>Document Type:</strong> Notice</li>
+<li><strong>Official Federal Register Link:</strong> [https://www.federalregister.gov/documents/2026/09/29/2026-19881/national-standards-for-the-physical-inspection-of-real-estate-scoring-notice](https://www.federalregister.gov/documents/2026/09/29/2026-19881/national-standards-for-the-physical-inspection-of-real-estate-scoring-notice)</li>
+<li><strong>Download Official PDF:</strong> [https://www.govinfo.gov/content/pkg/FR-2026-09-29/pdf/2026-19881.pdf](https://www.govinfo.gov/content/pkg/FR-2026-09-29/pdf/2026-19881.pdf)</li>
+</ul>
+<p>---</p>
+<h3>HOME Investment Partnerships Program: Further Program Updates and Streamlining</h3>
+<ul>
+<li><strong>Publication Date:</strong> 2026-04-30</li>
+<li><strong>Document Type:</strong> Proposed Rule</li>
+<li><strong>Official Federal Register Link:</strong> [https://www.federalregister.gov/documents/2026/04/30/2026-08406/home-investment-partnerships-program-further-program-updates-and-streamlining](https://www.federalregister.gov/documents/2026/04/30/2026-08406/home-investment-partnerships-program-further-program-updates-and-streamlining)</li>
+<li><strong>Download Official PDF:</strong> [https://www.govinfo.gov/content/pkg/FR-2026-04-30/pdf/2026-08406.pdf](https://www.govinfo.gov/content/pkg/FR-2026-04-30/pdf/2026-08406.pdf)</li>
+</ul>
+<p>---</p>
+<h3>National Standards for the Physical Inspection of Real Estate: Implementation Guidance and Inspection Standards for the HOME Investment Partnerships and Housing Trust Fund Programs</h3>
+<ul>
+<li><strong>Publication Date:</strong> 2026-04-14</li>
+<li><strong>Document Type:</strong> Notice</li>
+<li><strong>Official Federal Register Link:</strong> [https://www.federalregister.gov/documents/2026/04/14/2026-07176/national-standards-for-the-physical-inspection-of-real-estate-implementation-guidance-and-inspection](https://www.federalregister.gov/documents/2026/04/14/2026-07176/national-standards-for-the-physical-inspection-of-real-estate-implementation-guidance-and-inspection)</li>
+<li><strong>Download Official PDF:</strong> [https://www.govinfo.gov/content/pkg/FR-2026-04-14/pdf/2026-07176.pdf](https://www.govinfo.gov/content/pkg/FR-2026-04-14/pdf/2026-07176.pdf)</li>
+</ul>
+<p>---</p>
+<h3>30-Day Notice of Proposed Information Collection: Comment Request Alternative Inspections-Housing Choice Voucher Program</h3>
+<ul>
+<li><strong>Publication Date:</strong> 2025-12-04</li>
+<li><strong>Document Type:</strong> Notice</li>
+<li><strong>Official Federal Register Link:</strong> [https://www.federalregister.gov/documents/2025/12/04/2025-21927/30-day-notice-of-proposed-information-collection-comment-request-alternative-inspections-housing](https://www.federalregister.gov/documents/2025/12/04/2025-21927/30-day-notice-of-proposed-information-collection-comment-request-alternative-inspections-housing)</li>
+<li><strong>Download Official PDF:</strong> [https://www.govinfo.gov/content/pkg/FR-2025-12-04/pdf/2025-21927.pdf](https://www.govinfo.gov/content/pkg/FR-2025-12-04/pdf/2025-21927.pdf)</li>
+</ul>
+<p>---</p>
+<h3>Economic Growth Regulatory Relief and Consumer Protection Act: Implementation of National Standards for the Physical Inspection of Real Estate (NSPIRE); Extension of NSPIRE Compliance Date for Housing Choice Voucher, Project-Based Voucher, and Section 8 Moderate Rehabilitation Programs</h3>
+<ul>
+<li><strong>Publication Date:</strong> 2025-09-30</li>
+<li><strong>Document Type:</strong> Notice</li>
+<li><strong>Official Federal Register Link:</strong> [https://www.federalregister.gov/documents/2025/09/30/2025-19070/economic-growth-regulatory-relief-and-consumer-protection-act-implementation-of-national-standards](https://www.federalregister.gov/documents/2025/09/30/2025-19070/economic-growth-regulatory-relief-and-consumer-protection-act-implementation-of-national-standards)</li>
+<li><strong>Download Official PDF:</strong> [https://www.govinfo.gov/content/pkg/FR-2025-09-30/pdf/2025-19070.pdf](https://www.govinfo.gov/content/pkg/FR-2025-09-30/pdf/2025-19070.pdf)</li>
+</ul>
+<p>---</p>
+    </div>
+    <div class="footer">
+      HUD NSPIRE Property Inspection Compliance Kit &bull; Educational Self-Audit Tool &bull; Standard 24 CFR Part 5 Subpart G
+    </div>
+  </div>
+</body>
+</html>
