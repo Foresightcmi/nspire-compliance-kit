@@ -134,26 +134,28 @@ def build_scene_video(sc, raw_avatar):
     subprocess.run(cmd_a, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     
     if sc["type"] == "avatar":
-        # Video stream from speaking neural avatar
         shot = sc.get("shot", "wide")
-        fps = 24
-        total_frames = int(target_dur * fps)
         
         if shot == "wide":
-            # Multi-camera wide: pristine full frame
+            # Multi-camera wide: pristine full frame establishing shot
             vf = "scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2,setsar=1,fps=24"
+            ss_offset = "0.0"
         elif shot == "close_up":
-            # Multi-camera close-up: subtle crop punch-in for intensity
+            # Multi-camera close-up: punch-in on face and upper chest for intensity
             vf = "scale=1440:810,crop=1280:720:80:45,setsar=1,fps=24"
+            ss_offset = "0.5"
         elif shot == "medium_push":
-            # Multi-camera call to action: gentle push-in
-            vf = f"scale=1280:720,zoompan=z='min(zoom+0.0004,1.08)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={total_frames}:s=1280x720:fps=24"
+            # Multi-camera medium angle: lively framing with active speech, NO zoompan still freeze
+            vf = "scale=1360:765,crop=1280:720:40:22,setsar=1,fps=24"
+            ss_offset = "1.0"
         else:
             vf = "scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2,setsar=1,fps=24"
+            ss_offset = "0.0"
             
         cmd_v = [
             "ffmpeg", "-y",
-            "-stream_loop", "-1",
+            "-stream_loop", "4",
+            "-ss", ss_offset,
             "-i", raw_avatar,
             "-vf", vf,
             "-t", f"{target_dur:.2f}",
