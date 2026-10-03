@@ -1,0 +1,8 @@
+.git
+.github
+.vercel
+vsl_build
+__pycache__
+*.py
+*.bat
+*.png
