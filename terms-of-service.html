@@ -7,72 +7,92 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0b0f19; color: #f1f5f9; }
+        html {
+            font-size: 19px;
+            scroll-behavior: smooth;
+        }
+        @media (min-width: 640px) {
+            html {
+                font-size: 20px;
+            }
+        }
+        @media (min-width: 1024px) {
+            html {
+                font-size: 21px;
+            }
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0b0f19;
+            color: #f8fafc;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
         .font-mono { font-family: 'JetBrains Mono', monospace; }
-        .glass-panel { background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .glass-panel { background: rgba(17, 24, 39, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.12); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between py-12 px-6">
     <div class="max-w-4xl mx-auto w-full">
-        <a href="index.html" class="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-medium mb-8">
+        <a href="index.html" class="inline-flex items-center gap-2 text-base text-blue-400 hover:text-blue-300 font-bold mb-8">
             &larr; Back to Home
         </a>
 
         <div class="glass-panel p-8 md:p-12 rounded-2xl">
-            <div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">Legal Terms</div>
-            <h1 class="text-3xl font-extrabold text-white mb-6">Terms of Service</h1>
-            <p class="text-xs text-slate-400 mb-8">Effective Date: January 1, 2026 &bull; Last Updated: 2026</p>
+            <div class="text-sm font-mono text-blue-400 uppercase tracking-widest mb-2 font-bold">Legal Terms</div>
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-6">Terms of Service</h1>
+            <p class="text-sm font-mono text-slate-300 mb-8">Effective Date: January 1, 2026 &bull; Last Updated: 2026</p>
 
-            <div class="space-y-6 text-sm text-slate-300 leading-relaxed">
+            <div class="space-y-8 text-base text-slate-200 leading-relaxed">
                 <section>
-                    <h2 class="text-lg font-bold text-white mb-2">1. Agreement to Terms</h2>
+                    <h2 class="text-2xl font-bold text-white mb-3">1. Agreement to Terms</h2>
                     <p>
                         By purchasing, downloading, or using the HUD NSPIRE Property Inspection Compliance Kit, checklists, scoring spreadsheets, or associated materials (collectively, the "Service"), you agree to be legally bound by these Terms of Service. If you do not agree, do not purchase or use the Service.
                     </p>
                 </section>
 
-                <section class="p-4 bg-amber-950/20 border border-amber-500/30 rounded-xl">
-                    <h2 class="text-lg font-bold text-amber-300 mb-2">2. Explicit Statutory Non-Affiliation Notice</h2>
-                    <p class="text-amber-100/90">
+                <section class="p-6 bg-amber-950/30 border border-amber-500/40 rounded-xl">
+                    <h2 class="text-xl font-bold text-amber-300 mb-2">2. Explicit Statutory Non-Affiliation Notice</h2>
+                    <p class="text-amber-100 font-medium">
                         <strong>NSPIRE Defense is an independent private publishing company. We are NOT affiliated with, sponsored by, authorized by, or endorsed by the U.S. Department of Housing and Urban Development (HUD), the Real Estate Assessment Center (REAC), or any municipal public housing agency.</strong>
                     </p>
-                    <p class="text-amber-100/80 mt-2 text-xs">
+                    <p class="text-amber-200/90 mt-2 text-sm">
                         Official federal standards are public domain materials established under Title 24 of the Code of Federal Regulations (24 CFR Part 5 Subpart G) and published in the Federal Register.
                     </p>
                 </section>
 
                 <section>
-                    <h2 class="text-lg font-bold text-white mb-2">3. Educational &amp; Administrative Self-Audit Purpose Only</h2>
+                    <h2 class="text-2xl font-bold text-white mb-3">3. Educational &amp; Administrative Self-Audit Purpose Only</h2>
                     <p>
                         The Service is provided exclusively for internal property management self-audit, educational preparation, and administrative workflow efficiency. <strong>The Service does NOT constitute licensed legal advice, certified architectural engineering, or an official governmental inspection certification.</strong> Property owners remain solely responsible for the actual physical safety and legal habitability of their properties under applicable federal, state, and municipal building codes.
                     </p>
                 </section>
 
                 <section>
-                    <h2 class="text-lg font-bold text-white mb-2">4. License Grant &amp; Permitted Use</h2>
-                    <p class="mb-2">Upon verified payment, you are granted a non-exclusive, non-transferable, revocable license based on your purchased tier:</p>
-                    <ul class="list-disc pl-6 space-y-1 text-slate-400">
+                    <h2 class="text-2xl font-bold text-white mb-3">4. License Grant &amp; Permitted Use</h2>
+                    <p class="mb-3">Upon verified payment, you are granted a non-exclusive, non-transferable, revocable license based on your purchased tier:</p>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-300">
                         <li><strong>Quick-Check Defense ($47):</strong> Single-operator license for personal residential rental properties owned by the individual purchaser.</li>
                         <li><strong>Landlord Audit Vault ($97):</strong> Standard operations license for properties owned or directly managed by the purchaser's operating entity (up to 10 rental units).</li>
                         <li><strong>Executive Suite ($197):</strong> Multi-property commercial license for professional third-party property management companies, asset managers, and multifamily housing operators.</li>
                     </ul>
-                    <p class="mt-2 text-xs text-slate-400">
+                    <p class="mt-3 text-sm text-slate-300">
                         Redistribution, public hosting, reselling, or sub-licensing of the underlying files to third parties without express written authorization is strictly prohibited.
                     </p>
                 </section>
 
                 <section>
-                    <h2 class="text-lg font-bold text-white mb-2">5. Disclaimer of Warranties &amp; Limitation of Liability</h2>
+                    <h2 class="text-2xl font-bold text-white mb-3">5. Disclaimer of Warranties &amp; Limitation of Liability</h2>
                     <p>
                         The Service is provided on an "AS IS" and "AS AVAILABLE" basis. While we make every commercially reasonable effort to ensure our checklists mirror current HUD Federal Register notices, <strong>we make no warranties, express or implied, that use of this product will guarantee a passing inspection score, prevent voucher abatement, or overturn REAC citations upon appeal.</strong>
                     </p>
-                    <p class="mt-2">
+                    <p class="mt-3">
                         In no event shall NSPIRE Defense, its operators, or contributors be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of rental subsidies or repair costs, arising from the use of this Service. Our aggregate liability shall not exceed the total amount paid by you for the Service.
                     </p>
                 </section>
 
                 <section>
-                    <h2 class="text-lg font-bold text-white mb-2">6. Governing Law</h2>
+                    <h2 class="text-2xl font-bold text-white mb-3">6. Governing Law</h2>
                     <p>
                         These Terms shall be governed by and construed in accordance with the laws of the United States and the State of Georgia, without regard to its conflict of law provisions.
                     </p>
@@ -81,7 +101,7 @@
         </div>
     </div>
 
-    <footer class="mt-12 text-center text-xs text-slate-600">
+    <footer class="mt-12 text-center text-sm text-slate-400">
         &copy; 2026 NSPIRE Defense. All rights reserved. Title 24 CFR Part 5 Subpart G Educational Systems.
     </footer>
 </body>

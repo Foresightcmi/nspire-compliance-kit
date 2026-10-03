@@ -7,41 +7,61 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0b0f19; color: #f1f5f9; }
+        html {
+            font-size: 19px;
+            scroll-behavior: smooth;
+        }
+        @media (min-width: 640px) {
+            html {
+                font-size: 20px;
+            }
+        }
+        @media (min-width: 1024px) {
+            html {
+                font-size: 21px;
+            }
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0b0f19;
+            color: #f8fafc;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
         .font-mono { font-family: 'JetBrains Mono', monospace; }
-        .glass-panel { background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .glass-panel { background: rgba(17, 24, 39, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.12); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between py-12 px-6">
     <div class="max-w-4xl mx-auto w-full">
-        <a href="index.html" class="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-medium mb-8">
+        <a href="index.html" class="inline-flex items-center gap-2 text-base text-blue-400 hover:text-blue-300 font-bold mb-8">
             &larr; Back to Home
         </a>
 
         <div class="glass-panel p-8 md:p-12 rounded-2xl">
-            <div class="text-xs font-mono text-emerald-400 uppercase tracking-widest mb-2">Customer Protection</div>
-            <h1 class="text-3xl font-extrabold text-white mb-6">Refund &amp; Guarantee Policy</h1>
-            <p class="text-xs text-slate-400 mb-8">Effective Date: January 1, 2026 &bull; Last Updated: 2026</p>
+            <div class="text-sm font-mono text-emerald-400 uppercase tracking-widest mb-2 font-bold">Customer Protection</div>
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-6">Refund &amp; Guarantee Policy</h1>
+            <p class="text-sm font-mono text-slate-300 mb-8">Effective Date: January 1, 2026 &bull; Last Updated: 2026</p>
 
-            <div class="space-y-6 text-sm text-slate-300 leading-relaxed">
-                <section class="p-5 bg-emerald-950/20 border border-emerald-500/30 rounded-xl">
-                    <h2 class="text-lg font-bold text-emerald-300 mb-2">🛡️ Our 30-Day Regulatory Accuracy Guarantee</h2>
-                    <p class="text-emerald-100/90">
+            <div class="space-y-8 text-base text-slate-200 leading-relaxed">
+                <section class="p-6 bg-emerald-950/30 border border-emerald-500/40 rounded-xl">
+                    <h2 class="text-xl font-bold text-emerald-300 mb-2">🛡️ Our 30-Day Regulatory Accuracy Guarantee</h2>
+                    <p class="text-emerald-100 font-medium">
                         We stand firmly behind the quality, accuracy, and legal fidelity of our compliance materials. If you discover that any standard in our checklist contradicts current HUD NSPIRE published regulations under 24 CFR Part 5 Subpart G, or if you encounter any technical defect opening our files, we will issue a <strong>100% prompt refund</strong> within 30 days of purchase.
                     </p>
                 </section>
 
                 <section>
-                    <h2 class="text-lg font-bold text-white mb-2">1. Digital Delivery Nature</h2>
+                    <h2 class="text-2xl font-bold text-white mb-3">1. Digital Delivery Nature</h2>
                     <p>
                         Because the Compliance Kit consists of immediate downloadable intellectual property (PDFs, standalone HTML documents, and Excel calculation workbooks), delivery takes place instantly upon order confirmation. 
                     </p>
                 </section>
 
                 <section>
-                    <h2 class="text-lg font-bold text-white mb-2">2. Eligible Refund Circumstances</h2>
-                    <p class="mb-2">We gladly honor refund requests under any of the following conditions:</p>
-                    <ul class="list-disc pl-6 space-y-1 text-slate-400">
+                    <h2 class="text-2xl font-bold text-white mb-3">2. Eligible Refund Circumstances</h2>
+                    <p class="mb-3">We gladly honor refund requests under any of the following conditions:</p>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-300">
                         <li><strong>File Corrupted or Inaccessible:</strong> If a downloaded archive fails to decompress or our spreadsheets fail to function in Microsoft Excel or Google Sheets, and our support team cannot provide an operational copy within 24 hours.</li>
                         <li><strong>Accidental Duplicate Purchase:</strong> If you accidentally placed two identical orders for the same tier.</li>
                         <li><strong>Regulatory Discrepancy:</strong> If you identify an objective discrepancy with a verified Federal Register notice that our system failed to account for.</li>
@@ -49,23 +69,23 @@
                 </section>
 
                 <section>
-                    <h2 class="text-lg font-bold text-white mb-2">3. Exclusions</h2>
+                    <h2 class="text-2xl font-bold text-white mb-3">3. Exclusions</h2>
                     <p>
                         Our guarantee covers the accuracy and completeness of the self-audit tools themselves. <strong>Refunds cannot be granted on the basis of a property failing a physical REAC inspection.</strong> Inspection outcomes depend entirely on whether the landlord physically cured observed physical defects on the property prior to the inspector's arrival.
                     </p>
                 </section>
 
                 <section>
-                    <h2 class="text-lg font-bold text-white mb-2">4. How to Request a Refund</h2>
+                    <h2 class="text-2xl font-bold text-white mb-3">4. How to Request a Refund</h2>
                     <p>
-                        To request a refund, simply email <span class="font-mono text-blue-300">support@nspiredefense.com</span> within 30 calendar days of your order. Please include your order email, transaction ID, and a brief description of the issue. Refunds are returned to the original payment method within 3–5 business days.
+                        To request a refund, simply email <span class="font-mono text-blue-300 font-bold">support@nspiredefense.com</span> within 30 calendar days of your order. Please include your order email, transaction ID, and a brief description of the issue. Refunds are returned to the original payment method within 3–5 business days.
                     </p>
                 </section>
             </div>
         </div>
     </div>
 
-    <footer class="mt-12 text-center text-xs text-slate-600">
+    <footer class="mt-12 text-center text-sm text-slate-400">
         &copy; 2026 NSPIRE Defense. All rights reserved. Title 24 CFR Part 5 Subpart G Educational Systems.
     </footer>
 </body>

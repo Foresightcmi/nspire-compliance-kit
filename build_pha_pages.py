@@ -204,10 +204,13 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body {{ font-family: 'Inter', sans-serif; background-color: #0b0f19; color: #f1f5f9; }}
+        html {{ font-size: 19px; scroll-behavior: smooth; }}
+        @media (min-width: 640px) {{ html {{ font-size: 20px; }} }}
+        @media (min-width: 1024px) {{ html {{ font-size: 21px; }} }}
+        body {{ font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0b0f19; color: #f8fafc; line-height: 1.6; -webkit-font-smoothing: antialiased; }}
         .font-mono {{ font-family: 'JetBrains Mono', monospace; }}
-        .glass-panel {{ background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }}
-        .glass-card {{ background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); }}
+        .glass-panel {{ background: rgba(17, 24, 39, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.12); }}
+        .glass-card {{ background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }}
     </style>
     <link rel="alternate" type="application/json" href="../.well-known/webmcp.json" title="WebMCP Agent Manifest">
     <link rel="alternate" type="application/json" href="../.well-known/mcp.json" title="MCP Agent Manifest">
@@ -432,10 +435,13 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body {{ font-family: 'Inter', sans-serif; background-color: #0b0f19; color: #f1f5f9; }}
+        html {{ font-size: 19px; scroll-behavior: smooth; }}
+        @media (min-width: 640px) {{ html {{ font-size: 20px; }} }}
+        @media (min-width: 1024px) {{ html {{ font-size: 21px; }} }}
+        body {{ font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0b0f19; color: #f8fafc; line-height: 1.6; -webkit-font-smoothing: antialiased; }}
         .font-mono {{ font-family: 'JetBrains Mono', monospace; }}
-        .glass-panel {{ background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }}
-        .glass-card {{ background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); }}
+        .glass-panel {{ background: rgba(17, 24, 39, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.12); }}
+        .glass-card {{ background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }}
     </style>
     <link rel="alternate" type="application/json" href="../.well-known/webmcp.json" title="WebMCP Agent Manifest">
     <link rel="alternate" type="application/json" href="../.well-known/mcp.json" title="MCP Agent Manifest">
