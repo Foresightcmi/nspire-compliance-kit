@@ -28,6 +28,16 @@
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.06);
         }
+        video::cue {
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: rgba(11, 15, 25, 0.9);
+            color: #ffffff;
+            line-height: 1.4;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
     </style>
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Summary">
     <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Full LLM Context">
@@ -274,8 +284,8 @@
 <body class="antialiased selection:bg-blue-600 selection:text-white flex flex-col min-h-screen">
 
     <!-- Top Regulatory Notice Bar -->
-    <div class="bg-blue-950/70 border-b border-blue-500/20 px-4 py-2.5 text-xs text-blue-200 text-center font-medium flex items-center justify-center gap-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+    <div class="bg-blue-950/70 border-b border-blue-500/20 px-4 py-2.5 text-sm text-blue-200 text-center font-medium flex items-center justify-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
         <span>FEDERAL REGISTER STATUS: 100% Current for 2026 HUD NSPIRE Enforcement &bull; Title 24 CFR Part 5 Subpart G</span>
     </div>
 
@@ -283,24 +293,24 @@
     <header class="border-b border-slate-800/80 sticky top-0 z-40 bg-[#0b0f19]/90 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/30">
-                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/30">
+                    <i data-lucide="shield-check" class="w-6 h-6"></i>
                 </div>
                 <div>
-                    <span class="font-extrabold tracking-tight text-lg text-white">NSPIRE<span class="text-blue-400">DEFENSE</span></span>
-                    <span class="block text-[10px] text-slate-400 font-mono uppercase tracking-widest">Self-Audit &amp; NSPIRE Compliance</span>
+                    <span class="font-extrabold tracking-tight text-xl text-white">NSPIRE<span class="text-blue-400">DEFENSE</span></span>
+                    <span class="block text-xs text-slate-300 font-mono uppercase tracking-wider">Self-Audit &amp; NSPIRE Compliance</span>
                 </div>
             </div>
-            <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-300">
+            <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-200">
                 <a href="#quick-checker" class="hover:text-blue-400 transition-colors">Defect Quick-Checker</a>
                 <a href="pha/index.html" class="hover:text-blue-400 transition-colors">Housing Authorities</a>
                 <a href="#pricing" class="hover:text-blue-400 transition-colors">Pricing &amp; Vaults</a>
             </nav>
             <div class="flex items-center gap-3">
-                <a href="download.html" class="hidden sm:inline-flex px-3 py-1.5 rounded-lg border border-slate-700 text-xs font-semibold text-slate-300 hover:text-white hover:border-slate-500 transition-all">
+                <a href="download.html" class="hidden sm:inline-flex px-3.5 py-2 rounded-lg border border-slate-700 text-sm font-semibold text-slate-200 hover:text-white hover:border-slate-500 transition-all">
                     Access Portal
                 </a>
-                <a href="#pricing" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold rounded-lg transition-all shadow-md shadow-blue-500/20">
+                <a href="#pricing" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold rounded-lg transition-all shadow-md shadow-blue-500/20">
                     Get Inspection Kit
                 </a>
             </div>
@@ -310,7 +320,7 @@
     <main class="flex-grow">
         <!-- Hero Section -->
         <section class="py-16 md:py-20 px-6 max-w-5xl mx-auto text-center">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold mb-6">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-sm font-semibold mb-6">
                 <i data-lucide="alert-triangle" class="w-4 h-4"></i>
                 <span>Mandatory 24-Hour Emergency Defect Protocol In Effect</span>
             </div>
@@ -326,11 +336,11 @@
 
             <!-- 64-Second Executive Video Briefing -->
             <div class="max-w-3xl mx-auto rounded-2xl overflow-hidden glass-panel border border-blue-500/30 shadow-[0_0_50px_rgba(59,130,246,0.15)] mb-14 text-left">
-                <div class="px-5 py-3.5 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between text-xs">
-                    <span class="flex items-center gap-2 font-mono text-blue-400 font-semibold">
+                <div class="px-5 py-3.5 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between text-sm">
+                    <span class="flex items-center gap-2 font-mono text-blue-400 font-bold">
                         <i data-lucide="play-circle" class="w-4 h-4"></i> OFFICIAL REGULATORY BRIEFING (50 SECONDS)
                     </span>
-                    <span class="text-slate-400">NO HYPE &bull; PLAIN ENGLISH</span>
+                    <span class="text-slate-300 font-medium">NO HYPE &bull; PLAIN ENGLISH</span>
                 </div>
                 <div class="relative bg-black aspect-video">
                     <video controls playsinline preload="metadata" class="w-full h-full object-cover" poster="presenter_avatar_poster.jpg">
@@ -339,10 +349,10 @@
                         Your browser does not support video playback.
                     </video>
                 </div>
-                <div class="p-4 bg-slate-900/60 text-xs text-slate-300 border-t border-slate-800 flex items-center justify-between">
+                <div class="p-4 bg-slate-900/60 text-sm text-slate-200 border-t border-slate-800 flex items-center justify-between">
                     <span>Includes complete audio narration &amp; synchronized closed captions</span>
                     <span class="text-emerald-400 font-mono font-medium flex items-center gap-1.5">
-                        <i data-lucide="check" class="w-3.5 h-3.5"></i> Verified Federal Standard Protocol
+                        <i data-lucide="check" class="w-4 h-4"></i> Verified Federal Standard Protocol
                     </span>
                 </div>
             </div>
@@ -353,8 +363,8 @@
                     <div class="w-10 h-10 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center mb-4">
                         <i data-lucide="alert-octagon" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="font-bold text-lg text-white mb-2">Top 25 Immediate Fails</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">
+                    <h3 class="font-bold text-xl text-white mb-2">Top 25 Immediate Fails</h3>
+                    <p class="text-base text-slate-300 leading-relaxed">
                         Clear, plain-English breakdown of every 24-hour Life-Threatening defect that causes instant voucher payment suspensions, plus same-day fixes.
                     </p>
                 </div>
@@ -363,8 +373,8 @@
                     <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
                         <i data-lucide="clipboard-list" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="font-bold text-lg text-white mb-2">Room-by-Room Walkthrough</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">
+                    <h3 class="font-bold text-xl text-white mb-2">Room-by-Room Walkthrough</h3>
+                    <p class="text-base text-slate-300 leading-relaxed">
                         Printable clipboard checklists for bedrooms, kitchens, bathrooms, utility closets, common halls, and exterior grounds.
                     </p>
                 </div>
@@ -373,8 +383,8 @@
                     <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
                         <i data-lucide="calculator" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="font-bold text-lg text-white mb-2">Automated NSPIRE Scorer</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">
+                    <h3 class="font-bold text-xl text-white mb-2">Automated NSPIRE Scorer</h3>
+                    <p class="text-base text-slate-300 leading-relaxed">
                         Official Excel model that automatically calculates your projected 0–100 score, sampling requirements, and point deductions before inspection day.
                     </p>
                 </div>
@@ -384,47 +394,47 @@
         <!-- Interactive Defect Quick-Checker Section (Product-Led SEO Tool) -->
         <section id="quick-checker" class="py-16 px-6 max-w-5xl mx-auto border-t border-slate-800/80">
             <div class="text-center mb-10">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-semibold mb-3">
-                    <i data-lucide="search" class="w-3.5 h-3.5"></i>
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm font-semibold mb-3">
+                    <i data-lucide="search" class="w-4 h-4"></i>
                     <span>Free Interactive Self-Audit Database</span>
                 </div>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">HUD NSPIRE Defect Quick-Checker</h2>
-                <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto">
+                <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
                     Search any household item below to instantly check its federal severity rating, failure triggers, and the 5-minute landlord fix before an inspector arrives.
                 </p>
             </div>
 
             <!-- Search and Filter Bar -->
             <div class="glass-panel p-6 rounded-2xl border border-slate-800 mb-8 shadow-xl">
-                <div class="relative mb-5">
-                    <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
-                    <input type="text" id="defect-search" placeholder="Search any item (e.g., GFCI, smoke alarm, water heater, window, panel, gas)..." class="w-full bg-slate-900/90 border border-slate-700/80 rounded-xl py-3.5 pl-12 pr-4 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all">
+                <div class="relative mb-6">
+                    <i data-lucide="search" class="w-6 h-6 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+                    <input type="text" id="defect-search" placeholder="Search any item (e.g., GFCI, smoke alarm, water heater, window, panel, gas)..." class="w-full bg-slate-900/90 border border-slate-700/80 rounded-xl py-4 pl-14 pr-4 text-white placeholder-slate-400 text-base md:text-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 transition-all">
                 </div>
 
                 <!-- Category Filter Pills -->
-                <div class="flex flex-wrap gap-2 text-xs font-medium" id="filter-pills">
-                    <button data-cat="all" class="filter-pill active px-3.5 py-1.5 rounded-lg bg-blue-600 text-white font-semibold transition-all">All Items (<span id="count-all">12</span>)</button>
-                    <button data-cat="lt" class="filter-pill px-3.5 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-rose-300 border border-rose-500/30 transition-all">🚨 24-Hr Life-Threatening</button>
-                    <button data-cat="electrical" class="filter-pill px-3.5 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-all">⚡ Electrical</button>
-                    <button data-cat="fire" class="filter-pill px-3.5 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-all">🔥 Fire Safety</button>
-                    <button data-cat="plumbing" class="filter-pill px-3.5 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-all">💧 Plumbing</button>
-                    <button data-cat="openings" class="filter-pill px-3.5 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-all">🚪 Doors &amp; Windows</button>
-                    <button data-cat="hvac" class="filter-pill px-3.5 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-all">♨️ Gas &amp; Heat</button>
+                <div class="flex flex-wrap gap-2.5 text-sm md:text-base font-semibold" id="filter-pills">
+                    <button data-cat="all" class="filter-pill active px-4 py-2 rounded-xl bg-blue-600 text-white font-bold transition-all shadow-md">All Items (<span id="count-all">12</span>)</button>
+                    <button data-cat="lt" class="filter-pill px-4 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-rose-300 border border-rose-500/40 transition-all font-semibold">🚨 24-Hr Life-Threatening</button>
+                    <button data-cat="electrical" class="filter-pill px-4 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">⚡ Electrical</button>
+                    <button data-cat="fire" class="filter-pill px-4 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">🔥 Fire Safety</button>
+                    <button data-cat="plumbing" class="filter-pill px-4 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">💧 Plumbing</button>
+                    <button data-cat="openings" class="filter-pill px-4 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">🚪 Doors &amp; Windows</button>
+                    <button data-cat="hvac" class="filter-pill px-4 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">♨️ Gas &amp; Heat</button>
                 </div>
             </div>
 
             <!-- Dynamic Results Cards Container -->
-            <div id="defects-container" class="grid md:grid-cols-2 gap-5 mb-8">
+            <div id="defects-container" class="grid md:grid-cols-2 gap-6 mb-8">
                 <!-- Javascript will populate cards here -->
             </div>
 
             <!-- Audit Upgrade Banner -->
-            <div class="glass-card p-6 rounded-2xl border border-blue-500/40 bg-gradient-to-r from-blue-950/40 to-slate-900/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="glass-card p-6 md:p-8 rounded-2xl border border-blue-500/40 bg-gradient-to-r from-blue-950/40 to-slate-900/40 flex flex-col sm:flex-row items-center justify-between gap-5">
                 <div>
-                    <h4 class="text-white font-bold text-base mb-1">Need the full 67-standard room-by-room audit checklist?</h4>
-                    <p class="text-xs text-slate-300">Download the printable clipboard sheets, tenant notice templates, and the automated NSPIRE score calculator.</p>
+                    <h4 class="text-white font-bold text-lg md:text-xl mb-1.5">Need the full 67-standard room-by-room audit checklist?</h4>
+                    <p class="text-sm md:text-base text-slate-300">Download the printable clipboard sheets, tenant notice templates, and the automated NSPIRE score calculator.</p>
                 </div>
-                <a href="#pricing" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg transition-all shadow-md shrink-0">
+                <a href="#pricing" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white text-sm md:text-base font-bold rounded-xl transition-all shadow-md shrink-0">
                     View Complete Audit Kit &darr;
                 </a>
             </div>
@@ -444,62 +454,62 @@
                 <!-- Tier 1 -->
                 <div class="glass-card p-8 rounded-2xl border border-slate-800 flex flex-col justify-between">
                     <div>
-                        <div class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Emergency Tier</div>
-                        <h3 class="text-2xl font-bold text-white mb-1">Quick-Check Defense</h3>
-                        <p class="text-xs text-slate-400 mb-6">For single-property mom-and-pop landlords.</p>
-                        <div class="text-4xl font-black text-white mb-6">$47 <span class="text-sm text-slate-400 font-normal">one-time</span></div>
+                        <div class="text-sm font-mono uppercase tracking-wider text-slate-400 mb-2 font-semibold">Emergency Tier</div>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-1.5">Quick-Check Defense</h3>
+                        <p class="text-sm md:text-base text-slate-300 mb-6">For single-property mom-and-pop landlords.</p>
+                        <div class="text-4xl md:text-5xl font-black text-white mb-6">$47 <span class="text-base text-slate-400 font-normal">one-time</span></div>
                         
-                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
-                            <li class="flex items-start gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <ul class="space-y-3.5 text-base text-slate-200 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
                                 <span><strong>Top 25 Immediate Fails Guide</strong> (PDF)</span>
                             </li>
-                            <li class="flex items-start gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
                                 <span>Tenant 48-Hour Notice &amp; Prep Checklist</span>
                             </li>
-                            <li class="flex items-start gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
                                 <span>Life-Threatening 24-Hour Handyman Punchlist</span>
                             </li>
                         </ul>
                     </div>
-                    <a href="https://buy.stripe.com/8x27sM82r64E7fx4xEf3a00" class="w-full py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all border border-slate-700 text-center block">
+                    <a href="https://buy.stripe.com/8x27sM82r64E7fx4xEf3a00" class="w-full py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold text-base rounded-xl transition-all border border-slate-700 text-center block shadow-md">
                         Get Instant Access ($47)
                     </a>
                 </div>
 
                 <!-- Tier 2 (Featured) -->
                 <div class="glass-panel p-8 rounded-2xl border-2 border-blue-500 relative flex flex-col justify-between shadow-[0_0_40px_rgba(59,130,246,0.2)]">
-                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[11px] font-mono uppercase px-3 py-1 rounded-full font-bold">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs md:text-sm font-mono uppercase px-3.5 py-1.5 rounded-full font-bold shadow-md">
                         Most Popular for Landlords
                     </div>
                     <div>
-                        <div class="text-xs font-mono uppercase tracking-wider text-blue-400 mb-2">Complete Audit</div>
-                        <h3 class="text-2xl font-bold text-white mb-1">Landlord Audit Vault</h3>
-                        <p class="text-xs text-slate-400 mb-6">For landlords with 2 to 10 rental units.</p>
-                        <div class="text-4xl font-black text-white mb-6">$97 <span class="text-sm text-slate-400 font-normal">one-time</span></div>
+                        <div class="text-sm font-mono uppercase tracking-wider text-blue-400 mb-2 font-semibold">Complete Audit</div>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-1.5">Landlord Audit Vault</h3>
+                        <p class="text-sm md:text-base text-slate-300 mb-6">For landlords with 2 to 10 rental units.</p>
+                        <div class="text-4xl md:text-5xl font-black text-white mb-6">$97 <span class="text-base text-slate-400 font-normal">one-time</span></div>
                         
-                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
-                            <li class="flex items-start gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <ul class="space-y-3.5 text-base text-slate-200 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
                                 <span><strong>Everything in Quick-Check ($47 Value)</strong></span>
                             </li>
-                            <li class="flex items-start gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
                                 <span><strong>Master Room-by-Room 67-Standard Checklist</strong></span>
                             </li>
-                            <li class="flex items-start gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
                                 <span>Handyman Repair Scope of Work (SOW) Template</span>
                             </li>
-                            <li class="flex items-start gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
                                 <span>Automated Federal Register Regulatory Update Alerts</span>
                             </li>
                         </ul>
                     </div>
-                    <a href="https://buy.stripe.com/3cI6oI1E33Ww1VdaW2f3a01" class="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/30 text-center block">
+                    <a href="https://buy.stripe.com/3cI6oI1E33Ww1VdaW2f3a01" class="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold text-base rounded-xl transition-all shadow-lg shadow-blue-500/30 text-center block">
                         Get Complete Vault ($97)
                     </a>
                 </div>
@@ -507,31 +517,31 @@
                 <!-- Tier 3 -->
                 <div class="glass-card p-8 rounded-2xl border border-slate-800 flex flex-col justify-between">
                     <div>
-                        <div class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Commercial / PM</div>
-                        <h3 class="text-2xl font-bold text-white mb-1">Executive Suite</h3>
-                        <p class="text-xs text-slate-400 mb-6">For property managers &amp; multifamily operators.</p>
-                        <div class="text-4xl font-black text-white mb-6">$197 <span class="text-sm text-slate-400 font-normal">one-time</span></div>
+                        <div class="text-sm font-mono uppercase tracking-wider text-slate-400 mb-2 font-semibold">Commercial / PM</div>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-1.5">Executive Suite</h3>
+                        <p class="text-sm md:text-base text-slate-300 mb-6">For property managers &amp; multifamily operators.</p>
+                        <div class="text-4xl md:text-5xl font-black text-white mb-6">$197 <span class="text-base text-slate-400 font-normal">one-time</span></div>
                         
-                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
-                            <li class="flex items-start gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <ul class="space-y-3.5 text-base text-slate-200 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
                                 <span><strong>Everything in Complete Vault ($97 Value)</strong></span>
                             </li>
-                            <li class="flex items-start gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
                                 <span><strong>Official HUD NSPIRE Scoring Model (Excel)</strong></span>
                             </li>
-                            <li class="flex items-start gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
                                 <span>45-Day Technical Review &amp; Dispute Rebuttal Kit</span>
                             </li>
-                            <li class="flex items-start gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
                                 <span>Multi-Property Portfolio Commercial License</span>
                             </li>
                         </ul>
                     </div>
-                    <a href="https://buy.stripe.com/3cIcN6dmL64EeHZ9RYf3a02" class="w-full py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all border border-slate-700 text-center block">
+                    <a href="https://buy.stripe.com/3cIcN6dmL64EeHZ9RYf3a02" class="w-full py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold text-base rounded-xl transition-all border border-slate-700 text-center block shadow-md">
                         Get Commercial Suite ($197)
                     </a>
                 </div>
@@ -540,9 +550,9 @@
         </section>
 
         <!-- Mandatory Statutory Transparency & Non-Affiliation Section -->
-        <section class="py-12 px-6 max-w-4xl mx-auto text-xs text-slate-400 border-t border-slate-800/60 leading-relaxed">
-            <h4 class="font-bold uppercase text-slate-300 mb-2 tracking-wider flex items-center gap-1.5">
-                <i data-lucide="info" class="w-4 h-4 text-blue-400"></i> Legal Transparency &amp; Non-Affiliation Notice
+        <section class="py-12 px-6 max-w-4xl mx-auto text-sm text-slate-300 border-t border-slate-800/60 leading-relaxed">
+            <h4 class="font-bold uppercase text-slate-200 text-sm mb-3 tracking-wider flex items-center gap-2">
+                <i data-lucide="info" class="w-5 h-5 text-blue-400"></i> Legal Transparency &amp; Non-Affiliation Notice
             </h4>
             <p class="mb-3">
                 This website and the NSPIRE Compliance Kit are published as an independent educational, administrative, and self-audit preparatory resource. <strong>We are NOT affiliated with, sponsored by, or endorsed by the U.S. Department of Housing and Urban Development (HUD), the Real Estate Assessment Center (REAC), or any municipal housing authority.</strong>
@@ -556,19 +566,19 @@
         </section>
     </main>
 
-    <footer class="border-t border-slate-800/80 bg-slate-950 py-10 px-6 text-center text-xs text-slate-500">
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-10 px-6 text-center text-sm text-slate-400">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="text-left">
-                <div class="text-slate-400 font-bold mb-1">&copy; 2026 NSPIRE Defense. All rights reserved.</div>
-                <div class="text-[11px] text-slate-500">Independent Self-Audit Educational Systems &bull; Standard 24 CFR Part 5 Subpart G</div>
+                <div class="text-slate-300 font-bold mb-1 text-base">&copy; 2026 NSPIRE Defense. All rights reserved.</div>
+                <div class="text-xs text-slate-400">Independent Self-Audit Educational Systems &bull; Standard 24 CFR Part 5 Subpart G</div>
             </div>
-            <div class="flex flex-wrap items-center justify-center gap-6 text-xs">
-                <a href="privacy-policy.html" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
-                <a href="terms-of-service.html" class="hover:text-slate-300 transition-colors">Terms of Service</a>
-                <a href="refund-policy.html" class="hover:text-slate-300 transition-colors">Refund Guarantee</a>
-                <a href="pha/index.html" class="hover:text-slate-300 transition-colors">Housing Authorities (PHA)</a>
-                <a href="html_docs/LEGAL_SHIELD_DISCLAIMER.html" target="_blank" class="hover:text-slate-300 transition-colors">Legal Shield</a>
-                <a href="html_docs/LATEST_HUD_REGULATORY_ALERT.html" target="_blank" class="hover:text-slate-300 transition-colors">Federal Register Log</a>
+            <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-medium">
+                <a href="privacy-policy.html" class="hover:text-slate-200 transition-colors">Privacy Policy</a>
+                <a href="terms-of-service.html" class="hover:text-slate-200 transition-colors">Terms of Service</a>
+                <a href="refund-policy.html" class="hover:text-slate-200 transition-colors">Refund Guarantee</a>
+                <a href="pha/index.html" class="hover:text-slate-200 transition-colors">Housing Authorities (PHA)</a>
+                <a href="html_docs/LEGAL_SHIELD_DISCLAIMER.html" target="_blank" class="hover:text-slate-200 transition-colors">Legal Shield</a>
+                <a href="html_docs/LATEST_HUD_REGULATORY_ALERT.html" target="_blank" class="hover:text-slate-200 transition-colors">Federal Register Log</a>
             </div>
         </div>
     </footer>
@@ -759,11 +769,11 @@
                 container.innerHTML = `
                     <div class="col-span-2 glass-card p-8 rounded-xl border border-slate-800 text-center">
                         <i data-lucide="help-circle" class="w-10 h-10 text-slate-500 mx-auto mb-3"></i>
-                        <h4 class="text-white font-bold text-lg mb-1">No matching defect found</h4>
-                        <p class="text-slate-400 text-sm max-w-md mx-auto mb-4">
+                        <h4 class="text-white font-bold text-xl mb-2">No matching defect found</h4>
+                        <p class="text-slate-300 text-base max-w-md mx-auto mb-4">
                             Try searching for terms like "smoke", "GFCI", "water heater", "door", "window", or "panel".
                         </p>
-                        <button onclick="resetSearch()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold rounded-lg border border-slate-700">
+                        <button onclick="resetSearch()" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold rounded-lg border border-slate-700">
                             Reset Search
                         </button>
                     </div>
@@ -775,27 +785,27 @@
             container.innerHTML = filtered.map(item => `
                 <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
                     <div>
-                        <div class="flex items-start justify-between gap-3 mb-3">
-                            <span class="text-xs font-mono px-2.5 py-0.5 rounded-full border font-bold ${item.severityClass}">
+                        <div class="flex items-start justify-between gap-3 mb-3.5">
+                            <span class="text-sm font-mono px-3 py-1 rounded-full border font-bold ${item.severityClass}">
                                 ${item.severityLabel}
                             </span>
-                            <span class="text-[11px] font-mono uppercase text-slate-400">
+                            <span class="text-xs md:text-sm font-mono uppercase tracking-wider text-slate-300 font-semibold">
                                 ${item.area}
                             </span>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                            <i data-lucide="${item.icon}" class="w-4 h-4 text-blue-400 shrink-0"></i>
+                        <h3 class="text-xl md:text-2xl font-extrabold text-white mb-3 flex items-center gap-2.5">
+                            <i data-lucide="${item.icon}" class="w-5 h-5 text-blue-400 shrink-0"></i>
                             ${item.title}
                         </h3>
-                        <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-                            <strong class="text-slate-300">Inspector Criteria:</strong> ${item.checks}
+                        <p class="text-sm md:text-base text-slate-300 mb-3.5 leading-relaxed">
+                            <strong class="text-white font-semibold">Inspector Criteria:</strong> ${item.checks}
                         </p>
-                        <div class="p-3 bg-rose-950/20 border border-rose-500/20 rounded-lg text-xs text-rose-200 mb-3">
-                            <strong class="text-rose-400 font-semibold">🚨 What Fails:</strong> ${item.fails}
+                        <div class="p-3.5 bg-rose-950/30 border border-rose-500/30 rounded-lg text-sm md:text-base text-rose-100 mb-3.5 leading-relaxed">
+                            <strong class="text-rose-300 font-bold">🚨 What Fails:</strong> ${item.fails}
                         </div>
                     </div>
-                    <div class="p-3 bg-emerald-950/20 border border-emerald-500/20 rounded-lg text-xs text-emerald-200">
-                        <strong class="text-emerald-400 font-semibold">🛠️ 5-Minute Fix:</strong> ${item.fix}
+                    <div class="p-3.5 bg-emerald-950/30 border border-emerald-500/30 rounded-lg text-sm md:text-base text-emerald-100 leading-relaxed">
+                        <strong class="text-emerald-300 font-bold">🛠️ 5-Minute Fix:</strong> ${item.fix}
                     </div>
                 </div>
             `).join('');

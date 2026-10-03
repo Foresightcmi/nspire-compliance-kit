@@ -1047,27 +1047,27 @@ Labor billed at standard commercial emergency hourly rate.
     badge.style.zIndex = '99998';
     badge.style.display = 'flex';
     badge.style.alignItems = 'center';
-    badge.style.gap = '8px';
-    badge.style.padding = '7px 14px';
-    badge.style.backgroundColor = 'rgba(15, 23, 42, 0.92)';
+    badge.style.gap = '10px';
+    badge.style.padding = '9px 18px';
+    badge.style.backgroundColor = 'rgba(15, 23, 42, 0.94)';
     badge.style.backdropFilter = 'blur(12px)';
     badge.style.webkitBackdropFilter = 'blur(12px)';
-    badge.style.border = '1px solid rgba(56, 189, 248, 0.4)';
+    badge.style.border = '1px solid rgba(56, 189, 248, 0.5)';
     badge.style.borderRadius = '9999px';
     badge.style.color = '#f1f5f9';
-    badge.style.fontSize = '12px';
+    badge.style.fontSize = '14px';
     badge.style.fontWeight = '600';
     badge.style.fontFamily = "'JetBrains Mono', monospace";
-    badge.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(56, 189, 248, 0.15)';
+    badge.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(56, 189, 248, 0.2)';
     badge.style.cursor = 'pointer';
     badge.style.transition = 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)';
     badge.title = 'Click to inspect active WebMCP tools exposed to AI agents';
 
     badge.innerHTML = `
-      <span style="display:inline-block;width:8px;height:8px;border-radius:9999px;background-color:#10b981;box-shadow:0 0 8px #10b981;animation:pulse 2s infinite;"></span>
-      <span style="color:#38bdf8;font-weight:700;">WebMCP</span>
+      <span style="display:inline-block;width:9px;height:9px;border-radius:9999px;background-color:#10b981;box-shadow:0 0 8px #10b981;animation:pulse 2s infinite;"></span>
+      <span style="color:#38bdf8;font-weight:700;font-size:14px;">WebMCP</span>
       <span style="color:#94a3b8;">•</span>
-      <span style="color:#e2e8f0;font-size:11px;">7 Tools Active</span>
+      <span style="color:#e2e8f0;font-size:13px;font-weight:600;">7 Tools Active</span>
     `;
 
     badge.addEventListener('mouseenter', () => {
@@ -1108,47 +1108,47 @@ Labor billed at standard commercial emergency hourly rate.
       <div style="background:#0f172a;border:1px solid rgba(56, 189, 248, 0.3);border-radius:16px;max-width:760px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 25px 50px -12px rgba(0,0,0,0.7);overflow:hidden;font-family:'Inter',sans-serif;color:#f8fafc;">
         
         <!-- Header -->
-        <div style="padding:16px 24px;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;background:rgba(15,23,42,0.9);">
+        <div style="padding:18px 24px;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;background:rgba(15,23,42,0.9);">
           <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:36px;height:36px;border-radius:10px;background:rgba(56,189,248,0.15);border:1px solid rgba(56,189,248,0.3);display:flex;align-items:center;justify-content:center;color:#38bdf8;font-size:18px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(56,189,248,0.15);border:1px solid rgba(56,189,248,0.3);display:flex;align-items:center;justify-content:center;color:#38bdf8;font-size:20px;">
               🤖
             </div>
             <div>
               <div style="display:flex;align-items:center;gap:8px;">
-                <h3 style="font-size:16px;font-weight:700;margin:0;color:#ffffff;font-family:'JetBrains Mono',monospace;">WebMCP Agent Inspector</h3>
-                <span style="font-size:10px;padding:2px 8px;border-radius:9999px;background:rgba(16,185,129,0.2);color:#34d399;font-weight:600;border:1px solid rgba(16,185,129,0.3);">LIVE</span>
+                <h3 style="font-size:18px;font-weight:700;margin:0;color:#ffffff;font-family:'JetBrains Mono',monospace;">WebMCP Agent Inspector</h3>
+                <span style="font-size:11px;padding:3px 9px;border-radius:9999px;background:rgba(16,185,129,0.2);color:#34d399;font-weight:700;border:1px solid rgba(16,185,129,0.3);">LIVE</span>
               </div>
-              <p style="font-size:12px;color:#94a3b8;margin:2px 0 0 0;">Model Context Protocol gateway for autonomous AI agents (Gemini, Claude, ChatGPT)</p>
+              <p style="font-size:13px;color:#cbd5e1;margin:3px 0 0 0;">Model Context Protocol gateway for autonomous AI agents (Gemini, Claude, ChatGPT)</p>
             </div>
           </div>
-          <button id="nspire-webmcp-close" style="background:transparent;border:none;color:#94a3b8;font-size:20px;cursor:pointer;padding:4px 8px;border-radius:6px;transition:all 0.2s;">✕</button>
+          <button id="nspire-webmcp-close" style="background:transparent;border:none;color:#94a3b8;font-size:22px;cursor:pointer;padding:4px 8px;border-radius:6px;transition:all 0.2s;">✕</button>
         </div>
 
         <!-- Body -->
         <div style="padding:20px 24px;overflow-y:auto;display:flex;flex-direction:column;gap:16px;flex:1;">
-          <div style="background:rgba(30,41,59,0.5);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:14px;font-size:12px;color:#cbd5e1;line-height:1.5;">
+          <div style="background:rgba(30,41,59,0.5);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:14px;font-size:13px;color:#cbd5e1;line-height:1.6;">
             <strong style="color:#38bdf8;">Standard:</strong> W3C Web Machine Learning WebMCP Specification &bull; 
             <strong style="color:#38bdf8;">Manifest:</strong> <a href="/.well-known/webmcp.json" target="_blank" style="color:#38bdf8;text-decoration:underline;">/.well-known/webmcp.json</a> &bull; 
             <strong style="color:#38bdf8;">Global API:</strong> <code style="font-family:'JetBrains Mono',monospace;background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#a5f3fc;">window.webMCP</code>
           </div>
 
-          <div style="font-size:13px;font-weight:700;color:#f8fafc;letter-spacing:0.5px;text-transform:uppercase;font-family:'JetBrains Mono',monospace;">
+          <div style="font-size:14px;font-weight:700;color:#f8fafc;letter-spacing:0.5px;text-transform:uppercase;font-family:'JetBrains Mono',monospace;">
             Exposed Domain Tools (7)
           </div>
 
-          <div id="nspire-tools-list" style="display:flex;flex-direction:column;gap:10px;">
+          <div id="nspire-tools-list" style="display:flex;flex-direction:column;gap:12px;">
             ${WEBMCP_TOOLS.map(t => `
-              <div style="background:rgba(17,24,39,0.6);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:12px 16px;transition:all 0.2s;" class="tool-item">
+              <div style="background:rgba(17,24,39,0.6);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 18px;transition:all 0.2s;" class="tool-item">
                 <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-                  <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:#38bdf8;">${t.name}</span>
-                  <span style="font-size:10px;font-family:'JetBrains Mono',monospace;padding:2px 6px;border-radius:4px;background:rgba(255,255,255,0.06);color:#94a3b8;">${t.readOnly ? 'readOnly' : 'readWrite'}</span>
+                  <span style="font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;color:#38bdf8;">${t.name}</span>
+                  <span style="font-size:11px;font-family:'JetBrains Mono',monospace;font-weight:600;padding:3px 7px;border-radius:4px;background:rgba(255,255,255,0.06);color:#94a3b8;">${t.readOnly ? 'readOnly' : 'readWrite'}</span>
                 </div>
-                <p style="font-size:12px;color:#94a3b8;margin:0 0 10px 0;line-height:1.4;">${t.description}</p>
-                <div style="display:flex;align-items:center;gap:8px;">
-                  <button class="test-tool-btn" data-tool="${t.name}" style="background:rgba(56,189,248,0.15);border:1px solid rgba(56,189,248,0.3);color:#38bdf8;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;font-family:'JetBrains Mono',monospace;transition:all 0.2s;">
+                <p style="font-size:13px;color:#cbd5e1;margin:0 0 10px 0;line-height:1.5;">${t.description}</p>
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <button class="test-tool-btn" data-tool="${t.name}" style="background:rgba(56,189,248,0.15);border:1px solid rgba(56,189,248,0.3);color:#38bdf8;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:'JetBrains Mono',monospace;transition:all 0.2s;">
                     ⚡ Test Execute
                   </button>
-                  <span style="font-size:11px;color:#64748b;">${Object.keys(t.inputSchema.properties || {}).length} input parameters</span>
+                  <span style="font-size:12px;color:#94a3b8;">${Object.keys(t.inputSchema.properties || {}).length} input parameters</span>
                 </div>
               </div>
             `).join('')}
@@ -1157,17 +1157,17 @@ Labor billed at standard commercial emergency hourly rate.
           <!-- Live Output Console -->
           <div style="margin-top:8px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-              <span style="font-size:12px;font-weight:700;color:#94a3b8;font-family:'JetBrains Mono',monospace;">Execution Output Console</span>
-              <button id="nspire-clear-console" style="background:transparent;border:none;color:#64748b;font-size:11px;cursor:pointer;">Clear</button>
+              <span style="font-size:13px;font-weight:700;color:#94a3b8;font-family:'JetBrains Mono',monospace;">Execution Output Console</span>
+              <button id="nspire-clear-console" style="background:transparent;border:none;color:#64748b;font-size:12px;cursor:pointer;">Clear</button>
             </div>
-            <pre id="nspire-console-output" style="background:#020617;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#34d399;max-height:160px;overflow-y:auto;margin:0;white-space:pre-wrap;">// Click 'Test Execute' above to run any tool client-side in zero latency.</pre>
+            <pre id="nspire-console-output" style="background:#020617;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#34d399;max-height:180px;overflow-y:auto;margin:0;white-space:pre-wrap;line-height:1.5;">// Click 'Test Execute' above to run any tool client-side in zero latency.</pre>
           </div>
         </div>
 
         <!-- Footer -->
-        <div style="padding:14px 24px;border-top:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;background:rgba(15,23,42,0.9);font-size:12px;color:#64748b;">
+        <div style="padding:14px 24px;border-top:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;background:rgba(15,23,42,0.9);font-size:13px;color:#94a3b8;">
           <span>HUD NSPIRE Compliance Protocol &bull; Title 24 CFR Part 5</span>
-          <button id="nspire-copy-manifest" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:#f1f5f9;padding:6px 12px;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;">
+          <button id="nspire-copy-manifest" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:#f1f5f9;padding:7px 14px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;">
             Copy MCP JSON Manifest
           </button>
         </div>

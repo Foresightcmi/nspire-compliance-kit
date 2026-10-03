@@ -249,7 +249,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <body class="antialiased min-h-screen flex flex-col justify-between">
 
     <!-- Top Notice -->
-    <div class="bg-blue-950/70 border-b border-blue-500/20 px-4 py-2.5 text-xs text-blue-200 text-center font-medium">
+    <div class="bg-blue-950/70 border-b border-blue-500/20 px-4 py-2.5 text-sm text-blue-200 text-center font-medium">
         <span>FEDERAL COMPLIANCE NOTICE: {pha_name} ({pha_code}) Enforces HUD NSPIRE Standards Under 24 CFR Part 5 Subpart G</span>
     </div>
 
@@ -257,17 +257,17 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     <header class="border-b border-slate-800/80 sticky top-0 z-40 bg-[#0b0f19]/90 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="../index.html" class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/30">
-                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/30">
+                    <i data-lucide="shield-check" class="w-6 h-6"></i>
                 </div>
                 <div>
-                    <div class="font-extrabold text-base tracking-tight text-white flex items-center gap-2">
-                        NSPIRE DEFENSE <span class="text-xs px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono">LOCAL PHA HUB</span>
+                    <div class="font-extrabold text-lg tracking-tight text-white flex items-center gap-2">
+                        NSPIRE DEFENSE <span class="text-xs md:text-sm px-2.5 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono font-semibold">LOCAL PHA HUB</span>
                     </div>
-                    <div class="text-[10px] text-slate-400 font-mono">24 CFR PART 5 SUBPART G</div>
+                    <div class="text-xs text-slate-400 font-mono">24 CFR PART 5 SUBPART G</div>
                 </div>
             </a>
-            <a href="../index.html#pricing" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold rounded-lg transition-all shadow-md">
+            <a href="../index.html#pricing" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold rounded-lg transition-all shadow-md">
                 Get Inspection Kit
             </a>
         </div>
@@ -276,123 +276,123 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     <main class="max-w-5xl mx-auto px-6 py-12 flex-grow">
         
         <!-- Breadcrumbs -->
-        <div class="text-xs text-slate-400 mb-6 flex items-center gap-2">
-            <a href="../index.html" class="hover:text-blue-400">Home</a>
+        <div class="text-sm text-slate-300 mb-6 flex items-center gap-2">
+            <a href="../index.html" class="hover:text-blue-400 transition-colors">Home</a>
             <span>&rsaquo;</span>
-            <a href="index.html" class="hover:text-blue-400">Housing Authority Directory</a>
+            <a href="index.html" class="hover:text-blue-400 transition-colors">Housing Authority Directory</a>
             <span>&rsaquo;</span>
-            <span class="text-slate-200 font-medium">{city}, {state} ({pha_code})</span>
+            <span class="text-white font-medium">{city}, {state} ({pha_code})</span>
         </div>
 
         <!-- PHA Title Hero -->
         <div class="glass-panel p-8 md:p-12 rounded-2xl border border-slate-800 mb-10">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-semibold mb-4">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm font-semibold mb-4">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
                 <span>{jurisdiction} &bull; Code {pha_code}</span>
             </div>
             <h1 class="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight leading-tight">
                 {city} Section 8 NSPIRE Inspection Guide: <br>
                 <span class="text-blue-400">{pha_name}</span>
             </h1>
-            <p class="text-slate-300 text-sm md:text-base max-w-3xl leading-relaxed mb-8">
+            <p class="text-slate-200 text-base md:text-lg max-w-3xl leading-relaxed mb-8">
                 Landlords and property managers participating in the {pha_name} Housing Choice Voucher (HCV) program are subject to HUD's NSPIRE inspection framework. If your property receives a 24-hour Life-Threatening (LT) citation, {pha_name} is federally mandated to place your Housing Assistance Payment (HAP) voucher subsidy into <strong>immediate abatement</strong>.
             </p>
 
-            <div class="grid sm:grid-cols-3 gap-4 text-xs font-mono">
-                <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
-                    <span class="text-slate-500 block">JURISDICTION</span>
-                    <strong class="text-white">{city}, {state}</strong>
+            <div class="grid sm:grid-cols-3 gap-4 text-sm font-mono">
+                <div class="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
+                    <span class="text-slate-400 block mb-1">JURISDICTION</span>
+                    <strong class="text-white text-base">{city}, {state}</strong>
                 </div>
-                <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
-                    <span class="text-slate-500 block">HUD PHA IDENTIFIER</span>
-                    <strong class="text-white">{pha_code}</strong>
+                <div class="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
+                    <span class="text-slate-400 block mb-1">HUD PHA IDENTIFIER</span>
+                    <strong class="text-white text-base">{pha_code}</strong>
                 </div>
-                <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
-                    <span class="text-slate-500 block">FEDERAL PROTOCOL</span>
-                    <strong class="text-emerald-400">24 CFR Part 5 Subpart G</strong>
+                <div class="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
+                    <span class="text-slate-400 block mb-1">FEDERAL PROTOCOL</span>
+                    <strong class="text-emerald-400 text-base">24 CFR Part 5 Subpart G</strong>
                 </div>
             </div>
         </div>
 
         <!-- Local Landlord Defect Checklist -->
         <div class="mb-12">
-            <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4 flex items-center gap-2">
                 <i data-lucide="alert-octagon" class="w-6 h-6 text-rose-500"></i>
                 Top 5 Automatic Inspection Failures in {city} Units
             </h2>
-            <p class="text-sm text-slate-400 mb-6">
+            <p class="text-base text-slate-300 mb-6">
                 Inspectors dispatched across {city} strictly cite these 5 items during annual and change-of-tenancy NSPIRE audits:
             </p>
 
             <div class="space-y-4">
-                <div class="glass-card p-5 rounded-xl border border-slate-800 flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 font-bold text-sm">1</div>
+                <div class="glass-card p-6 rounded-xl border border-slate-800 flex items-start gap-4">
+                    <div class="w-9 h-9 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 font-bold text-base">1</div>
                     <div>
-                        <h3 class="text-base font-bold text-white mb-1">Smoke Alarm Battery Tamper-Resistance</h3>
-                        <p class="text-xs text-slate-300 mb-2">Battery-only smoke alarms must feature a sealed 10-year tamper-resistant lithium battery. Alarms requiring replacement 9V batteries are an automatic failure in sleeping rooms and hallways.</p>
-                        <span class="text-[11px] font-mono text-rose-400 font-semibold bg-rose-950/40 px-2.5 py-0.5 rounded border border-rose-500/30">Mandatory 24-Hour Cure Notice</span>
+                        <h3 class="text-lg md:text-xl font-extrabold text-white mb-1.5">Smoke Alarm Battery Tamper-Resistance</h3>
+                        <p class="text-sm md:text-base text-slate-200 mb-2.5 leading-relaxed">Battery-only smoke alarms must feature a sealed 10-year tamper-resistant lithium battery. Alarms requiring replacement 9V batteries are an automatic failure in sleeping rooms and hallways.</p>
+                        <span class="text-xs md:text-sm font-mono text-rose-300 font-bold bg-rose-950/50 px-3 py-1 rounded border border-rose-500/40">Mandatory 24-Hour Cure Notice</span>
                     </div>
                 </div>
 
-                <div class="glass-card p-5 rounded-xl border border-slate-800 flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 font-bold text-sm">2</div>
+                <div class="glass-card p-6 rounded-xl border border-slate-800 flex items-start gap-4">
+                    <div class="w-9 h-9 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 font-bold text-base">2</div>
                     <div>
-                        <h3 class="text-base font-bold text-white mb-1">GFCI Protection Within 6 Feet of Water</h3>
-                        <p class="text-xs text-slate-300 mb-2">All receptacles within 6 feet of kitchen sink rims, bathroom vanities, or laundry basins must be GFCI protected and trip immediately when the test button is depressed.</p>
-                        <span class="text-[11px] font-mono text-rose-400 font-semibold bg-rose-950/40 px-2.5 py-0.5 rounded border border-rose-500/30">Mandatory 24-Hour Cure Notice</span>
+                        <h3 class="text-lg md:text-xl font-extrabold text-white mb-1.5">GFCI Protection Within 6 Feet of Water</h3>
+                        <p class="text-sm md:text-base text-slate-200 mb-2.5 leading-relaxed">All receptacles within 6 feet of kitchen sink rims, bathroom vanities, or laundry basins must be GFCI protected and trip immediately when the test button is depressed.</p>
+                        <span class="text-xs md:text-sm font-mono text-rose-300 font-bold bg-rose-950/50 px-3 py-1 rounded border border-rose-500/40">Mandatory 24-Hour Cure Notice</span>
                     </div>
                 </div>
 
-                <div class="glass-card p-5 rounded-xl border border-slate-800 flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 font-bold text-sm">3</div>
+                <div class="glass-card p-6 rounded-xl border border-slate-800 flex items-start gap-4">
+                    <div class="w-9 h-9 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 font-bold text-base">3</div>
                     <div>
-                        <h3 class="text-base font-bold text-white mb-1">Water Heater TPR Relief Discharge Line</h3>
-                        <p class="text-xs text-slate-300 mb-2">The Temperature and Pressure Relief (TPR) safety discharge pipe must be rigid metal (copper) or CPVC and terminate between 2 and 6 inches from the floor surface.</p>
-                        <span class="text-[11px] font-mono text-rose-400 font-semibold bg-rose-950/40 px-2.5 py-0.5 rounded border border-rose-500/30">Mandatory 24-Hour Cure Notice</span>
+                        <h3 class="text-lg md:text-xl font-extrabold text-white mb-1.5">Water Heater TPR Relief Discharge Line</h3>
+                        <p class="text-sm md:text-base text-slate-200 mb-2.5 leading-relaxed">The Temperature and Pressure Relief (TPR) safety discharge pipe must be rigid metal (copper) or CPVC and terminate between 2 and 6 inches from the floor surface.</p>
+                        <span class="text-xs md:text-sm font-mono text-rose-300 font-bold bg-rose-950/50 px-3 py-1 rounded border border-rose-500/40">Mandatory 24-Hour Cure Notice</span>
                     </div>
                 </div>
 
-                <div class="glass-card p-5 rounded-xl border border-slate-800 flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 font-bold text-sm">4</div>
+                <div class="glass-card p-6 rounded-xl border border-slate-800 flex items-start gap-4">
+                    <div class="w-9 h-9 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 font-bold text-base">4</div>
                     <div>
-                        <h3 class="text-base font-bold text-white mb-1">Bedroom Emergency Egress Window Operation</h3>
-                        <p class="text-xs text-slate-300 mb-2">At least one window in every bedroom must open easily without tools and remain suspended without physical props or weights to allow emergency firefighter access.</p>
-                        <span class="text-[11px] font-mono text-rose-400 font-semibold bg-rose-950/40 px-2.5 py-0.5 rounded border border-rose-500/30">Mandatory 24-Hour Cure Notice</span>
+                        <h3 class="text-lg md:text-xl font-extrabold text-white mb-1.5">Bedroom Emergency Egress Window Operation</h3>
+                        <p class="text-sm md:text-base text-slate-200 mb-2.5 leading-relaxed">At least one window in every bedroom must open easily without tools and remain suspended without physical props or weights to allow emergency firefighter access.</p>
+                        <span class="text-xs md:text-sm font-mono text-rose-300 font-bold bg-rose-950/50 px-3 py-1 rounded border border-rose-500/40">Mandatory 24-Hour Cure Notice</span>
                     </div>
                 </div>
 
-                <div class="glass-card p-5 rounded-xl border border-slate-800 flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 font-bold text-sm">5</div>
+                <div class="glass-card p-6 rounded-xl border border-slate-800 flex items-start gap-4">
+                    <div class="w-9 h-9 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 font-bold text-base">5</div>
                     <div>
-                        <h3 class="text-base font-bold text-white mb-1">Interior Keyless Entry Lock Deadbolts</h3>
-                        <p class="text-xs text-slate-300 mb-2">Double-cylinder locks requiring an interior key to exit are strictly prohibited under federal life-safety codes. Only thumb-turn deadbolts are permitted on exterior egress doors.</p>
-                        <span class="text-[11px] font-mono text-rose-400 font-semibold bg-rose-950/40 px-2.5 py-0.5 rounded border border-rose-500/30">Mandatory 24-Hour Cure Notice</span>
+                        <h3 class="text-lg md:text-xl font-extrabold text-white mb-1.5">Interior Keyless Entry Lock Deadbolts</h3>
+                        <p class="text-sm md:text-base text-slate-200 mb-2.5 leading-relaxed">Double-cylinder locks requiring an interior key to exit are strictly prohibited under federal life-safety codes. Only thumb-turn deadbolts are permitted on exterior egress doors.</p>
+                        <span class="text-xs md:text-sm font-mono text-rose-300 font-bold bg-rose-950/50 px-3 py-1 rounded border border-rose-500/40">Mandatory 24-Hour Cure Notice</span>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Call to Action Banner -->
-        <div class="glass-panel p-8 rounded-2xl border-2 border-blue-500/60 bg-gradient-to-br from-blue-950/40 to-slate-900 text-center mb-12">
+        <div class="glass-panel p-8 md:p-10 rounded-2xl border-2 border-blue-500/60 bg-gradient-to-br from-blue-950/40 to-slate-900 text-center mb-12">
             <h3 class="text-2xl md:text-3xl font-black text-white mb-2">
                 Conduct a Pre-Inspection Self-Audit Before {pha_name} Arrives
             </h3>
-            <p class="text-sm text-slate-300 max-w-2xl mx-auto mb-6">
+            <p class="text-base md:text-lg text-slate-200 max-w-2xl mx-auto mb-6">
                 Avoid frozen subsidy payments and costly reinspection fees. Get our complete room-by-room clipboard checklists, tenant notice templates, handyman work order scopes, and official NSPIRE scoring calculator.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="../index.html#pricing" class="w-full sm:w-auto px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/30">
+                <a href="../index.html#pricing" class="w-full sm:w-auto px-6 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold text-base rounded-xl transition-all shadow-lg shadow-blue-500/30">
                     Download {city} Landlord Compliance Kit ($47+)
                 </a>
-                <a href="../index.html#quick-checker" class="w-full sm:w-auto px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all border border-slate-700">
+                <a href="../index.html#quick-checker" class="w-full sm:w-auto px-6 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold text-base rounded-xl transition-all border border-slate-700">
                     Use Free Defect Quick-Checker
                 </a>
             </div>
         </div>
 
         <!-- Legal Disclaimer -->
-        <div class="p-6 rounded-xl border border-slate-800 bg-slate-950/60 text-xs text-slate-500 leading-relaxed">
-            <h4 class="font-bold uppercase text-slate-400 mb-1">Statutory Notice &amp; Disclaimer</h4>
+        <div class="p-6 rounded-xl border border-slate-800 bg-slate-950/60 text-sm text-slate-300 leading-relaxed">
+            <h4 class="font-bold uppercase text-slate-200 mb-1">Statutory Notice &amp; Disclaimer</h4>
             <p>
                 NSPIRE Defense is an independent publisher of educational self-audit materials and is NOT affiliated with, sponsored by, or endorsed by {pha_name}, the U.S. Department of Housing and Urban Development (HUD), or the Real Estate Assessment Center (REAC). Standards referenced herein are derived from Title 24 CFR Part 5 Subpart G.
             </p>
@@ -401,14 +401,14 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-800/80 bg-slate-950 py-8 px-6 text-center text-xs text-slate-500">
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-8 px-6 text-center text-sm text-slate-400">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>&copy; 2026 NSPIRE Defense. All rights reserved. Self-Audit Educational Systems.</div>
-            <div class="flex items-center gap-6">
-                <a href="../privacy-policy.html" class="hover:text-slate-300">Privacy Policy</a>
-                <a href="../terms-of-service.html" class="hover:text-slate-300">Terms of Service</a>
-                <a href="../refund-policy.html" class="hover:text-slate-300">Refund Guarantee</a>
-                <a href="index.html" class="hover:text-slate-300">All PHA Hubs</a>
+            <div class="flex items-center gap-6 font-medium">
+                <a href="../privacy-policy.html" class="hover:text-slate-200">Privacy Policy</a>
+                <a href="../terms-of-service.html" class="hover:text-slate-200">Terms of Service</a>
+                <a href="../refund-policy.html" class="hover:text-slate-200">Refund Guarantee</a>
+                <a href="index.html" class="hover:text-slate-200">All PHA Hubs</a>
             </div>
         </div>
     </footer>
@@ -446,17 +446,17 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     <header class="border-b border-slate-800/80 sticky top-0 z-40 bg-[#0b0f19]/90 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="../index.html" class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/30">
-                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/30">
+                    <i data-lucide="shield-check" class="w-6 h-6"></i>
                 </div>
                 <div>
-                    <div class="font-extrabold text-base tracking-tight text-white flex items-center gap-2">
-                        NSPIRE DEFENSE <span class="text-xs px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono">NATIONAL DIRECTORY</span>
+                    <div class="font-extrabold text-lg tracking-tight text-white flex items-center gap-2">
+                        NSPIRE DEFENSE <span class="text-xs md:text-sm px-2.5 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono font-semibold">NATIONAL DIRECTORY</span>
                     </div>
-                    <div class="text-[10px] text-slate-400 font-mono">24 CFR PART 5 SUBPART G</div>
+                    <div class="text-xs text-slate-400 font-mono">24 CFR PART 5 SUBPART G</div>
                 </div>
             </a>
-            <a href="../index.html#pricing" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold rounded-lg transition-all shadow-md">
+            <a href="../index.html#pricing" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold rounded-lg transition-all shadow-md">
                 Get Inspection Kit
             </a>
         </div>
@@ -465,9 +465,9 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     <main class="max-w-6xl mx-auto px-6 py-12 flex-grow">
         
         <div class="text-center max-w-3xl mx-auto mb-12">
-            <div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">Municipal Compliance Hubs</div>
+            <div class="text-sm font-mono text-blue-400 uppercase tracking-widest mb-2 font-semibold">Municipal Compliance Hubs</div>
             <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">Public Housing Authority Directory</h1>
-            <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+            <p class="text-slate-300 text-base md:text-lg leading-relaxed">
                 Select your local Public Housing Agency (PHA) below to review jurisdiction-specific inspection guidance, 24-hour emergency life-safety protocols, and self-audit prep checklists.
             </p>
         </div>
@@ -478,26 +478,26 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
         </div>
 
         <!-- Call to Action Banner -->
-        <div class="glass-panel p-8 rounded-2xl border border-blue-500/40 text-center">
-            <h3 class="text-2xl font-bold text-white mb-2">Can't Find Your Local Housing Authority?</h3>
-            <p class="text-xs text-slate-300 max-w-xl mx-auto mb-6">
+        <div class="glass-panel p-8 md:p-10 rounded-2xl border border-blue-500/40 text-center">
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Can't Find Your Local Housing Authority?</h3>
+            <p class="text-sm md:text-base text-slate-200 max-w-xl mx-auto mb-6">
                 HUD NSPIRE standards are uniform across all 50 states and territories under Title 24 CFR Part 5 Subpart G. Our universal compliance kit covers every federal requirement nationwide.
             </p>
-            <a href="../index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs transition-all shadow-md">
+            <a href="../index.html" class="inline-flex items-center gap-2 px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-sm transition-all shadow-md">
                 View Universal NSPIRE Compliance Kit &rarr;
             </a>
         </div>
 
     </main>
 
-    <footer class="border-t border-slate-800/80 bg-slate-950 py-8 px-6 text-center text-xs text-slate-500">
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-8 px-6 text-center text-sm text-slate-400">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>&copy; 2026 NSPIRE Defense. All rights reserved. Self-Audit Educational Systems.</div>
-            <div class="flex items-center gap-6">
-                <a href="../privacy-policy.html" class="hover:text-slate-300">Privacy Policy</a>
-                <a href="../terms-of-service.html" class="hover:text-slate-300">Terms of Service</a>
-                <a href="../refund-policy.html" class="hover:text-slate-300">Refund Guarantee</a>
-                <a href="../index.html" class="hover:text-slate-300">Home</a>
+            <div class="flex items-center gap-6 font-medium">
+                <a href="../privacy-policy.html" class="hover:text-slate-200">Privacy Policy</a>
+                <a href="../terms-of-service.html" class="hover:text-slate-200">Terms of Service</a>
+                <a href="../refund-policy.html" class="hover:text-slate-200">Refund Guarantee</a>
+                <a href="../index.html" class="hover:text-slate-200">Home</a>
             </div>
         </div>
     </footer>
@@ -534,12 +534,12 @@ def generate_pha_pages():
         cards_html.append(f"""
             <a href="{file_name}" class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-blue-500/60 transition-all group block">
                 <div class="flex items-start justify-between mb-3">
-                    <span class="text-xs font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20 font-bold">{pha['pha_code']}</span>
-                    <span class="text-xs text-slate-400 font-mono">{pha['city']}, {pha['state']}</span>
+                    <span class="text-xs md:text-sm font-mono px-2.5 py-1 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20 font-bold">{pha['pha_code']}</span>
+                    <span class="text-xs md:text-sm text-slate-300 font-mono">{pha['city']}, {pha['state']}</span>
                 </div>
-                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-2">{pha['pha_name']}</h3>
-                <p class="text-xs text-slate-400 leading-relaxed mb-4">{pha['jurisdiction']}</p>
-                <div class="text-xs text-blue-400 font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                <h3 class="text-lg md:text-xl font-bold text-white group-hover:text-blue-400 transition-colors mb-2">{pha['pha_name']}</h3>
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">{pha['jurisdiction']}</p>
+                <div class="text-sm text-blue-400 font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                     View Inspection Guidelines &rarr;
                 </div>
             </a>
