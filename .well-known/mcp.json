@@ -1,0 +1,156 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema/mcp.json",
+  "name": "HUD NSPIRE Compliance Kit MCP Agent Gateway",
+  "description": "Structured Model Context Protocol tools for autonomous AI agents (Gemini, ChatGPT Operator, Claude in Chrome, Perplexity) to compute HUD NSPIRE physical property inspection scores, search 67-standard federal physical property defects, retrieve 24-hour emergency fixes, audit PHA jurisdiction rules, and generate statutory 48-hour tenant notices.",
+  "version": "1.0.0",
+  "homepage": "https://hud-nspire.pages.dev",
+  "rpcEndpoint": "https://hud-nspire.pages.dev/webmcp.js",
+  "documentation": "https://hud-nspire.pages.dev/llms.txt",
+  "tools": [
+    {
+      "name": "calculate_nspire_score",
+      "description": "Compute projected HUD NSPIRE 0–100 inspection score under Title 24 CFR Part 5 and 88 FR 43380, returning PASS/FAIL status, point deductions by severity tier, inspection cycle frequency (1, 2, or 3-year), and Section 8 voucher suspension risk.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "total_units": {
+            "type": "number",
+            "description": "Total residential units at the property (default: 24)"
+          },
+          "inspected_units": {
+            "type": "number",
+            "description": "Sample of units to be inspected by HUD (defaults to federal sampling table minimum, e.g. 5 for 24 units)"
+          },
+          "life_threatening_defects": {
+            "type": "number",
+            "description": "Count of Life-Threatening (LT) 24-hour emergency citations found in inspected units"
+          },
+          "severe_defects": {
+            "type": "number",
+            "description": "Count of Severe non-life-threatening citations (24-hour non-emergency repair)"
+          },
+          "moderate_defects": {
+            "type": "number",
+            "description": "Count of Moderate severity citations (30-day repair window)"
+          },
+          "low_defects": {
+            "type": "number",
+            "description": "Count of Low severity citations (60-day repair window)"
+          },
+          "outside_defects": {
+            "type": "number",
+            "description": "Count of building exterior and site defects"
+          },
+          "inside_common_defects": {
+            "type": "number",
+            "description": "Count of common interior area defects (hallways, laundry, mechanical rooms)"
+          }
+        }
+      },
+      "readOnly": true
+    },
+    {
+      "name": "lookup_nspire_defect",
+      "description": "Search the official 67-standard HUD NSPIRE physical inspection defect database by item name, failure description, location, or trade category to retrieve inspector criteria, failure triggers, and 5-minute landlord fixes.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search keyword or phrase (e.g. 'GFCI', 'smoke alarm', 'water heater', 'deadbolt', 'mold', 'window', 'handrail', 'electrical panel', 'peeling paint', 'dryer vent')"
+          },
+          "category": {
+            "type": "string",
+            "enum": ["all", "electrical", "fire", "plumbing", "openings", "hvac", "structural", "lt"],
+            "description": "Filter by HUD NSPIRE standard category (default: 'all')"
+          }
+        }
+      },
+      "readOnly": true
+    },
+    {
+      "name": "get_life_threatening_fails",
+      "description": "Retrieve the complete Top 25 Immediate Life-Threatening (24-Hour) HUD NSPIRE Emergency Failures that trigger mandatory 24-hour repair notices and threaten immediate Section 8 voucher rent abatement.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": ["all", "electrical", "fire", "plumbing", "openings", "hvac", "structural"],
+            "description": "Optional category filter"
+          }
+        }
+      },
+      "readOnly": true
+    },
+    {
+      "name": "get_compliance_kit_tiers",
+      "description": "Retrieve pricing, package deliverables, included templates, and direct download links for the HUD NSPIRE Compliance Kit packages ($47 Quick-Check Defense, $97 Landlord Audit Vault, $197 Property Manager Multi-Unit Hub).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tier_id": {
+            "type": "string",
+            "enum": ["all", "quick-check", "landlord-vault", "property-manager"],
+            "description": "Specific tier to inspect or 'all'"
+          }
+        }
+      },
+      "readOnly": true
+    },
+    {
+      "name": "get_pha_jurisdiction_rules",
+      "description": "Query specific inspection policies, statutory 24-hour proof submission portals, Section 8 voucher payment guidelines, and contact protocols for the top 20 Public Housing Authorities (AHA, NYCHA, CHA, DHA, HACLA, etc.).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Housing Authority name, PHA code (e.g. GA006, NY005, IL002, TX009), city, or two-letter state code"
+          }
+        },
+        "required": ["query"]
+      },
+      "readOnly": true
+    },
+    {
+      "name": "generate_48hr_tenant_notice",
+      "description": "Generate a compliant statutory 48-hour pre-inspection tenant entry notice letter meeting Title 24 CFR Part 5 and local landlord-tenant statutes, including mandatory bedroom egress clearance rules, smoke detector tampering warnings, and pet restraint instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tenant_name": {
+            "type": "string",
+            "description": "Full name of resident (optional, defaults to 'Resident')"
+          },
+          "unit_number": {
+            "type": "string",
+            "description": "Apartment or unit identifier (e.g. 'Unit 4B')"
+          },
+          "property_address": {
+            "type": "string",
+            "description": "Full property street address, city, state, zip"
+          },
+          "inspection_date": {
+            "type": "string",
+            "description": "Scheduled date of HUD NSPIRE inspection (e.g. 'Tuesday, October 14, 2026')"
+          },
+          "arrival_window": {
+            "type": "string",
+            "description": "Estimated inspector arrival window (e.g. '9:00 AM – 1:00 PM')"
+          },
+          "management_phone": {
+            "type": "string",
+            "description": "Property management contact phone number"
+          },
+          "management_email": {
+            "type": "string",
+            "description": "Property management contact email address"
+          }
+        },
+        "required": ["unit_number", "property_address", "inspection_date", "management_phone"]
+      },
+      "readOnly": true
+    }
+  ]
+}

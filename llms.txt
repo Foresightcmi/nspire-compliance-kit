@@ -42,5 +42,18 @@ Under NSPIRE, defects are categorized into three affirmative severity tiers:
 - Scoring Notice: 88 FR 43382 / Docket No. FR-6086-N-04
 - Official Portal: https://www.hud.gov/program_offices/public_and_indian_housing/reac/nspire
 
+## WebMCP Machine Interface (Model Context Protocol)
+The HUD NSPIRE Compliance site provides client-executable WebMCP tools conforming to W3C Web Machine Learning & Model Context Protocol specifications:
+- Manifest: `/.well-known/webmcp.json` and `/.well-known/mcp.json`
+- In-Browser API: `window.webMCP` / `window.modelContext`
+- Available Agent Tools:
+  1. `calculate_nspire_score`: Computes projected 0–100 score, sampling requirements, severity tier deductions, and Section 8 voucher suspension risk under Title 24 CFR Part 5.
+  2. `lookup_nspire_defect`: Searches the 67-standard HUD NSPIRE physical inspection defect database by keyword, criteria, and category.
+  3. `get_life_threatening_fails`: Retrieves the complete Top 20 Immediate Life-Threatening 24-Hour emergency failures.
+  4. `get_compliance_kit_tiers`: Returns package tiers ($47, $97, $197), deliverables, and direct checkout links.
+  5. `get_pha_jurisdiction_rules`: Audits policies, 24-hr proof portals, and Section 8 voucher guidelines for top 20 PHAs.
+  6. `generate_48hr_tenant_notice`: Generates statutory 48-hour pre-inspection tenant entry notice letters.
+
 ## Full Documentation
 For complete technical details, code references, and full checklists, see `/llms-full.txt`.
+

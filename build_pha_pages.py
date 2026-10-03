@@ -209,6 +209,8 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
         .glass-panel {{ background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }}
         .glass-card {{ background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); }}
     </style>
+    <link rel="alternate" type="application/json" href="../.well-known/webmcp.json" title="WebMCP Agent Manifest">
+    <link rel="alternate" type="application/json" href="../.well-known/mcp.json" title="MCP Agent Manifest">
 
     <script type="application/ld+json">
     {{
@@ -414,6 +416,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     <script>
         lucide.createIcons();
     </script>
+    <script src="../webmcp.js" defer></script>
 </body>
 </html>
 """
@@ -434,6 +437,8 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
         .glass-panel {{ background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }}
         .glass-card {{ background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); }}
     </style>
+    <link rel="alternate" type="application/json" href="../.well-known/webmcp.json" title="WebMCP Agent Manifest">
+    <link rel="alternate" type="application/json" href="../.well-known/mcp.json" title="MCP Agent Manifest">
 </head>
 <body class="min-h-screen flex flex-col justify-between">
 
@@ -500,6 +505,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     <script>
         lucide.createIcons();
     </script>
+    <script src="../webmcp.js" defer></script>
 </body>
 </html>
 """

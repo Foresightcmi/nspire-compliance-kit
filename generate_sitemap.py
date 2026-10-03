@@ -15,6 +15,8 @@ urls = [
     {"loc": f"{DOMAIN}/index.html", "priority": "1.0", "changefreq": "weekly"},
     {"loc": f"{DOMAIN}/llms.txt", "priority": "0.8", "changefreq": "weekly"},
     {"loc": f"{DOMAIN}/llms-full.txt", "priority": "0.8", "changefreq": "weekly"},
+    {"loc": f"{DOMAIN}/.well-known/webmcp.json", "priority": "0.8", "changefreq": "weekly"},
+    {"loc": f"{DOMAIN}/.well-known/mcp.json", "priority": "0.8", "changefreq": "weekly"},
     {"loc": f"{DOMAIN}/privacy-policy.html", "priority": "0.3", "changefreq": "yearly"},
     {"loc": f"{DOMAIN}/terms-of-service.html", "priority": "0.3", "changefreq": "yearly"},
     {"loc": f"{DOMAIN}/refund-policy.html", "priority": "0.3", "changefreq": "yearly"},
