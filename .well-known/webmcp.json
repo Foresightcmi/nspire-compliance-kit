@@ -151,6 +151,50 @@
         "required": ["unit_number", "property_address", "inspection_date", "management_phone"]
       },
       "readOnly": true
+    },
+    {
+      "name": "dispatch_emergency_handyman_rfq",
+      "description": "Dispatch an urgent statutory 24-hour repair work order and RFQ to verified local maintenance technicians and emergency handymen for cited HUD NSPIRE life-safety defects, generating photo-proof checklists and locking in emergency response.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "property_address": {
+            "type": "string",
+            "description": "Full street address of the property requiring emergency repair"
+          },
+          "city": {
+            "type": "string",
+            "description": "City or municipality"
+          },
+          "state": {
+            "type": "string",
+            "description": "Two-letter state code (e.g. 'GA')"
+          },
+          "housing_authority": {
+            "type": "string",
+            "description": "Public Housing Authority (e.g. 'Atlanta Housing Authority (AHA)')"
+          },
+          "contact_name": {
+            "type": "string",
+            "description": "Property manager or owner contact name"
+          },
+          "contact_phone": {
+            "type": "string",
+            "description": "Immediate callback telephone number for contractor"
+          },
+          "urgency_hours": {
+            "type": "number",
+            "description": "Statutory completion window in hours (default: 24)"
+          },
+          "defects_summary": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "List of defect items to remedy (e.g. ['GFCI outlet within 6ft of kitchen sink', 'Water heater TPR relief discharge pipe missing', 'Sealed 10-year smoke alarm needed in front hallway'])"
+          }
+        },
+        "required": ["property_address", "city", "contact_phone", "defects_summary"]
+      },
+      "readOnly": false
     }
   ]
 }

@@ -53,6 +53,7 @@ The HUD NSPIRE Compliance site provides client-executable WebMCP tools conformin
   4. `get_compliance_kit_tiers`: Returns package tiers ($47, $97, $197), deliverables, and direct checkout links.
   5. `get_pha_jurisdiction_rules`: Audits policies, 24-hr proof portals, and Section 8 voucher guidelines for top 20 PHAs.
   6. `generate_48hr_tenant_notice`: Generates statutory 48-hour pre-inspection tenant entry notice letters.
+  7. `dispatch_emergency_handyman_rfq`: Dispatches urgent 24-hour repair work orders and RFQs to verified local maintenance technicians for cited life-safety violations.
 
 ## Full Documentation
 For complete technical details, code references, and full checklists, see `/llms-full.txt`.

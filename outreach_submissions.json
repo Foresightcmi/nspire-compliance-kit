@@ -1,0 +1,39 @@
+[
+  {
+    "dispatch_id": "DISPATCH-20261003105848",
+    "timestamp": "2026-10-03T10:58:48.055271",
+    "property_address": "482 Highland Avenue NE",
+    "city": "Atlanta",
+    "defects_count": 3,
+    "urgency_hours": 24,
+    "status": "DISPATCH_READY",
+    "scope_summary": "================================================================================\nURGENT: STATUTORY 24-HOUR HUD NSPIRE EMERGENCY REPAIR DISPATCH\n================================================================================\nDISPATCH ID: DISPATCH-20261003105848\nTIMESTAMP: 2026-10-03 10:58:48 EST\nSERVICE WINDOW: MUST BE COMPLETED & PHOTO-VERIFIED WITHIN 24 HOURS\nJURISDICTION: Atlanta Housing Authority (AHA) (Title 24 CFR Part 5 Subpart G)\n\nPROPERTY LOCATION:\n  Address: 482 Highland Avenue NE, Atlanta\n  Contact Name: Marcus Sterling (Lead Property Manager)\n  Contact Phone: (404) 555-8911\n\nMANDATORY SCOPE OF WORK (LIFE-SAFETY PRIORITY):\n1. Kitchen & Bath GFCI Outlets within 6ft\n   - Scope: Replace standard duplex receptacle with 15A GFCI outlet.\n   - Estimated Materials: ~$12\n2. Water Heater TPR Relief Discharge Pipe\n   - Scope: Install 3/4 rigid copper/CPVC discharge pipe terminating 4 inches from floor.\n   - Estimated Materials: ~$14\n3. Smoke Alarm Sealed Lithium Battery\n   - Scope: Install 10-year sealed tamper-resistant smoke alarm.\n   - Estimated Materials: ~$15\n\nCONTRACTOR PHOTO-PROOF REQUIREMENTS:\n1. High-resolution BEFORE photo showing non-compliant condition.\n2. High-resolution AFTER photo showing completed fix with date/time stamp.\n3. Materials purchase receipt itemizing parts installed.\n4. Work order sign-off by technician and resident (if occupied).\n\nPAYMENT TERMS:\nImmediate expedited disbursement upon upload and verification of photos to portal.\nEstimated Materials Budget: ~$41 (Labor billed at standard commercial emergency hourly rate).\n================================================================================"
+  },
+  {
+    "id": "outreach-lead-1791039521599",
+    "timestamp": "2026-10-03T10:58:41.599242",
+    "metro": "Metro Atlanta",
+    "target_company": "Buckhead & Southside Housing Group",
+    "channel": "B2B_Outreach_Campaign",
+    "status": "DRAFTED_VERIFIED",
+    "pitch_preview": "I noticed Buckhead & Southside Housing Group manages subsidized residential housing units in Atlanta under Atlanta Housing Authority (AHA). Under HUD's active NSPIRE physical inspe..."
+  },
+  {
+    "id": "outreach-lead-1791039521586",
+    "timestamp": "2026-10-03T10:58:41.586294",
+    "metro": "Metro Atlanta",
+    "target_company": "Decatur & Fulton Property Partners",
+    "channel": "B2B_Outreach_Campaign",
+    "status": "DRAFTED_VERIFIED",
+    "pitch_preview": "I noticed Decatur & Fulton Property Partners manages subsidized residential housing units in Atlanta under Atlanta Housing Authority (AHA). Under HUD's active NSPIRE physical inspe..."
+  },
+  {
+    "id": "outreach-lead-1791039521585",
+    "timestamp": "2026-10-03T10:58:41.585080",
+    "metro": "Metro Atlanta",
+    "target_company": "Peachtree Residential Management",
+    "channel": "B2B_Outreach_Campaign",
+    "status": "DRAFTED_VERIFIED",
+    "pitch_preview": "I noticed Peachtree Residential Management manages subsidized residential housing units in Atlanta under Atlanta Housing Authority (AHA). Under HUD's active NSPIRE physical inspect..."
+  }
+]
