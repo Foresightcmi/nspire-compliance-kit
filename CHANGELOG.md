@@ -13,3 +13,6 @@
 
 ## [2025-09-30] Economic Growth Regulatory Relief and Consumer Protection Act: Implementation of National Standards for the Physical Inspection of Real Estate (NSPIRE); Extension of NSPIRE Compliance Date for Housing Choice Voucher, Project-Based Voucher, and Section 8 Moderate Rehabilitation Programs
 - Type: Notice | Official Link: https://www.federalregister.gov/documents/2025/09/30/2025-19070/economic-growth-regulatory-relief-and-consumer-protection-act-implementation-of-national-standards
+
+## [2026-10-27] Notice of Regulatory Waiver Requests Granted for the First Quarter of Calendar Year 2026
+- Type: Notice | Official Link: https://www.federalregister.gov/documents/2026/10/27/2026-21886/notice-of-regulatory-waiver-requests-granted-for-the-first-quarter-of-calendar-year-2026
